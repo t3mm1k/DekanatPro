@@ -1,0 +1,60 @@
+/Users/t3mm1k/projects/с#/lab1/Console View/bin/Debug/net8.0/Console View
+/Users/t3mm1k/projects/с#/lab1/Console View/bin/Debug/net8.0/Console View.deps.json
+/Users/t3mm1k/projects/с#/lab1/Console View/bin/Debug/net8.0/Console View.runtimeconfig.json
+/Users/t3mm1k/projects/с#/lab1/Console View/bin/Debug/net8.0/Console View.dll
+/Users/t3mm1k/projects/с#/lab1/Console View/bin/Debug/net8.0/Console View.pdb
+/Users/t3mm1k/projects/с#/lab1/Console View/bin/Debug/net8.0/Business Logic.dll
+/Users/t3mm1k/projects/с#/lab1/Console View/bin/Debug/net8.0/Model.dll
+/Users/t3mm1k/projects/с#/lab1/Console View/bin/Debug/net8.0/Business Logic.pdb
+/Users/t3mm1k/projects/с#/lab1/Console View/bin/Debug/net8.0/Model.pdb
+/Users/t3mm1k/projects/с#/lab1/Console View/obj/Debug/net8.0/Console View.csproj.AssemblyReference.cache
+/Users/t3mm1k/projects/с#/lab1/Console View/obj/Debug/net8.0/Console View.GeneratedMSBuildEditorConfig.editorconfig
+/Users/t3mm1k/projects/с#/lab1/Console View/obj/Debug/net8.0/Console View.AssemblyInfoInputs.cache
+/Users/t3mm1k/projects/с#/lab1/Console View/obj/Debug/net8.0/Console View.AssemblyInfo.cs
+/Users/t3mm1k/projects/с#/lab1/Console View/obj/Debug/net8.0/Console View.csproj.CoreCompileInputs.cache
+/Users/t3mm1k/projects/с#/lab1/Console View/obj/Debug/net8.0/Console .437E32C8.Up2Date
+/Users/t3mm1k/projects/с#/lab1/Console View/obj/Debug/net8.0/Console View.dll
+/Users/t3mm1k/projects/с#/lab1/Console View/obj/Debug/net8.0/refint/Console View.dll
+/Users/t3mm1k/projects/с#/lab1/Console View/obj/Debug/net8.0/Console View.pdb
+/Users/t3mm1k/projects/с#/lab1/Console View/obj/Debug/net8.0/Console View.genruntimeconfig.cache
+/Users/t3mm1k/projects/с#/lab1/Console View/obj/Debug/net8.0/ref/Console View.dll
+T:\OneDrive\Desktop\lab1\Console View\bin\Debug\net8.0\Console View.exe
+T:\OneDrive\Desktop\lab1\Console View\bin\Debug\net8.0\Console View.deps.json
+T:\OneDrive\Desktop\lab1\Console View\bin\Debug\net8.0\Console View.runtimeconfig.json
+T:\OneDrive\Desktop\lab1\Console View\bin\Debug\net8.0\Console View.dll
+T:\OneDrive\Desktop\lab1\Console View\bin\Debug\net8.0\Console View.pdb
+T:\OneDrive\Desktop\lab1\Console View\bin\Debug\net8.0\Business Logic.dll
+T:\OneDrive\Desktop\lab1\Console View\bin\Debug\net8.0\Model.dll
+T:\OneDrive\Desktop\lab1\Console View\bin\Debug\net8.0\Business Logic.pdb
+T:\OneDrive\Desktop\lab1\Console View\bin\Debug\net8.0\Model.pdb
+T:\OneDrive\Desktop\lab1\Console View\obj\Debug\net8.0\Console View.csproj.AssemblyReference.cache
+T:\OneDrive\Desktop\lab1\Console View\obj\Debug\net8.0\Console View.GeneratedMSBuildEditorConfig.editorconfig
+T:\OneDrive\Desktop\lab1\Console View\obj\Debug\net8.0\Console View.AssemblyInfoInputs.cache
+T:\OneDrive\Desktop\lab1\Console View\obj\Debug\net8.0\Console View.AssemblyInfo.cs
+T:\OneDrive\Desktop\lab1\Console View\obj\Debug\net8.0\Console View.csproj.CoreCompileInputs.cache
+T:\OneDrive\Desktop\lab1\Console View\obj\Debug\net8.0\Console .437E32C8.Up2Date
+T:\OneDrive\Desktop\lab1\Console View\obj\Debug\net8.0\Console View.dll
+T:\OneDrive\Desktop\lab1\Console View\obj\Debug\net8.0\refint\Console View.dll
+T:\OneDrive\Desktop\lab1\Console View\obj\Debug\net8.0\Console View.pdb
+T:\OneDrive\Desktop\lab1\Console View\obj\Debug\net8.0\Console View.genruntimeconfig.cache
+T:\OneDrive\Desktop\lab1\Console View\obj\Debug\net8.0\ref\Console View.dll
+D:\projects\c#\AIS\lab1\Console View\bin\Debug\net8.0\Console View.exe
+D:\projects\c#\AIS\lab1\Console View\bin\Debug\net8.0\Console View.deps.json
+D:\projects\c#\AIS\lab1\Console View\bin\Debug\net8.0\Console View.runtimeconfig.json
+D:\projects\c#\AIS\lab1\Console View\bin\Debug\net8.0\Console View.dll
+D:\projects\c#\AIS\lab1\Console View\bin\Debug\net8.0\Console View.pdb
+D:\projects\c#\AIS\lab1\Console View\bin\Debug\net8.0\Business Logic.dll
+D:\projects\c#\AIS\lab1\Console View\bin\Debug\net8.0\Model.dll
+D:\projects\c#\AIS\lab1\Console View\bin\Debug\net8.0\Business Logic.pdb
+D:\projects\c#\AIS\lab1\Console View\bin\Debug\net8.0\Model.pdb
+D:\projects\c#\AIS\lab1\Console View\obj\Debug\net8.0\Console View.csproj.AssemblyReference.cache
+D:\projects\c#\AIS\lab1\Console View\obj\Debug\net8.0\Console View.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\c#\AIS\lab1\Console View\obj\Debug\net8.0\Console View.AssemblyInfoInputs.cache
+D:\projects\c#\AIS\lab1\Console View\obj\Debug\net8.0\Console View.AssemblyInfo.cs
+D:\projects\c#\AIS\lab1\Console View\obj\Debug\net8.0\Console View.csproj.CoreCompileInputs.cache
+D:\projects\c#\AIS\lab1\Console View\obj\Debug\net8.0\Console .437E32C8.Up2Date
+D:\projects\c#\AIS\lab1\Console View\obj\Debug\net8.0\Console View.dll
+D:\projects\c#\AIS\lab1\Console View\obj\Debug\net8.0\refint\Console View.dll
+D:\projects\c#\AIS\lab1\Console View\obj\Debug\net8.0\Console View.pdb
+D:\projects\c#\AIS\lab1\Console View\obj\Debug\net8.0\Console View.genruntimeconfig.cache
+D:\projects\c#\AIS\lab1\Console View\obj\Debug\net8.0\ref\Console View.dll
