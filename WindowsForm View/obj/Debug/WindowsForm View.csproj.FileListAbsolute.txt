@@ -1,0 +1,15 @@
+T:\VS\Projects\DecanatPROFramework\WindowsForm View\obj\Debug\WindowsForm View.csproj.AssemblyReference.cache
+T:\VS\Projects\DecanatPROFramework\WindowsForm View\obj\Debug\WinForms_View.Form2.resources
+T:\VS\Projects\DecanatPROFramework\WindowsForm View\obj\Debug\WindowsForm_View.Properties.Resources.resources
+T:\VS\Projects\DecanatPROFramework\WindowsForm View\obj\Debug\WindowsForm View.csproj.GenerateResource.cache
+T:\VS\Projects\DecanatPROFramework\WindowsForm View\obj\Debug\WindowsForm View.csproj.CoreCompileInputs.cache
+T:\VS\Projects\DecanatPROFramework\WindowsForm View\bin\Debug\WindowsForm View.exe.config
+T:\VS\Projects\DecanatPROFramework\WindowsForm View\bin\Debug\WindowsForm View.exe
+T:\VS\Projects\DecanatPROFramework\WindowsForm View\bin\Debug\WindowsForm View.pdb
+T:\VS\Projects\DecanatPROFramework\WindowsForm View\bin\Debug\BusinessLogic.dll
+T:\VS\Projects\DecanatPROFramework\WindowsForm View\bin\Debug\Model.dll
+T:\VS\Projects\DecanatPROFramework\WindowsForm View\bin\Debug\BusinessLogic.pdb
+T:\VS\Projects\DecanatPROFramework\WindowsForm View\bin\Debug\Model.pdb
+T:\VS\Projects\DecanatPROFramework\WindowsForm View\obj\Debug\WindowsF.872E5E42.Up2Date
+T:\VS\Projects\DecanatPROFramework\WindowsForm View\obj\Debug\WindowsForm View.exe
+T:\VS\Projects\DecanatPROFramework\WindowsForm View\obj\Debug\WindowsForm View.pdb

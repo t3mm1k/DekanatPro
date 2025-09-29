@@ -12,5 +12,5 @@
         Group = group;
         StudentNumber = studentNumber;
     }
-    
+
 }
