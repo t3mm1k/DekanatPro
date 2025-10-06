@@ -1,9 +1,0 @@
-T:\VS\Projects\DecanatPROFramework\BusinessLogic\bin\Debug\BusinessLogic.dll
-T:\VS\Projects\DecanatPROFramework\BusinessLogic\bin\Debug\BusinessLogic.pdb
-T:\VS\Projects\DecanatPROFramework\BusinessLogic\bin\Debug\Model.dll
-T:\VS\Projects\DecanatPROFramework\BusinessLogic\bin\Debug\Model.pdb
-T:\VS\Projects\DecanatPROFramework\BusinessLogic\obj\Debug\Business Logic.csproj.AssemblyReference.cache
-T:\VS\Projects\DecanatPROFramework\BusinessLogic\obj\Debug\Business Logic.csproj.CoreCompileInputs.cache
-T:\VS\Projects\DecanatPROFramework\BusinessLogic\obj\Debug\Business.31A8D8CC.Up2Date
-T:\VS\Projects\DecanatPROFramework\BusinessLogic\obj\Debug\BusinessLogic.dll
-T:\VS\Projects\DecanatPROFramework\BusinessLogic\obj\Debug\BusinessLogic.pdb
