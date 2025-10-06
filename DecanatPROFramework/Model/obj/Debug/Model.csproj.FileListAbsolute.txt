@@ -1,0 +1,6 @@
+T:\VS\Projects\DecanatPROFramework\Model\bin\Debug\Model.dll
+T:\VS\Projects\DecanatPROFramework\Model\bin\Debug\Model.pdb
+T:\VS\Projects\DecanatPROFramework\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+T:\VS\Projects\DecanatPROFramework\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+T:\VS\Projects\DecanatPROFramework\Model\obj\Debug\Model.dll
+T:\VS\Projects\DecanatPROFramework\Model\obj\Debug\Model.pdb
