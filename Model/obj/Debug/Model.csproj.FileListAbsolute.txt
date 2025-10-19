@@ -4,3 +4,9 @@ T:\VS\Projects\DecanatPROFramework\Model\obj\Debug\Model.csproj.AssemblyReferenc
 T:\VS\Projects\DecanatPROFramework\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 T:\VS\Projects\DecanatPROFramework\Model\obj\Debug\Model.dll
 T:\VS\Projects\DecanatPROFramework\Model\obj\Debug\Model.pdb
+D:\Desktop\DekPro\DekanatPro\Model\bin\Debug\Model.dll
+D:\Desktop\DekPro\DekanatPro\Model\bin\Debug\Model.pdb
+D:\Desktop\DekPro\DekanatPro\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+D:\Desktop\DekPro\DekanatPro\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\Desktop\DekPro\DekanatPro\Model\obj\Debug\Model.dll
+D:\Desktop\DekPro\DekanatPro\Model\obj\Debug\Model.pdb

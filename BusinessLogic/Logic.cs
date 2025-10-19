@@ -1,56 +1,60 @@
-﻿//using Model;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using DataAccessLayer;
 
 namespace Business_Logic
 {
     public class Logic
     {
-        private List<Student> students { get; set; } = new List<Student>();
+        private readonly IRepository<Student> _repository;
 
-        public void AddStudent(string name, string speciality, string group, string studentNumber)
+        public Logic(IRepository<Student> repository)
         {
-            students.Add(new Student(name, speciality, group, studentNumber));
+            _repository = repository;
         }
 
-        public bool canAddStudent(string studentNumber)
+        public void AddStudent(Student student)
         {
-            return students.Where(Student => Student.StudentNumber == studentNumber).Count() == 0;
+            if (_repository.ReadById(student.StudentNumber) == null)
+                _repository.Create(student);
+        }
+
+        public bool CanAddStudent(string studentNumber)
+        {
+            return _repository.ReadById(studentNumber) == null;
         }
 
         public void DeleteStudent(string studentNumber)
         {
-            students = students.Where(Student => Student.StudentNumber != studentNumber).ToList();
+            _repository.Delete(studentNumber);
+        }
+
+        public List<Student> GetAllStudents()
+        {
+            return _repository.ReadAll().ToList();
         }
 
         public DataTable GetSheet()
         {
+            var students = _repository.ReadAll();
             DataTable sheet = new DataTable();
-
             sheet.Columns.Add("Имя", typeof(string));
             sheet.Columns.Add("Специальность", typeof(string));
             sheet.Columns.Add("Группа", typeof(string));
             sheet.Columns.Add("Студ. Билет", typeof(string));
 
-            foreach (Student student in students)
-            {
-                sheet.Rows.Add(student.Name, student.Speciality, student.Group, student.StudentNumber);
-            }
+            foreach (var s in students)
+                sheet.Rows.Add(s.Name, s.Speciality, s.Group, s.StudentNumber);
 
             return sheet;
         }
 
         public Dictionary<string, int> GetHistogram()
         {
-            var histogram = students
-                .GroupBy(Student => Student.Speciality)
-                .OrderBy(g => g.Key)
+            return _repository.ReadAll()
+                .GroupBy(s => s.Speciality)
                 .ToDictionary(g => g.Key, g => g.Count());
-
-            return histogram;
         }
-
     }
-
 }

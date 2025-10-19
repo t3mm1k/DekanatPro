@@ -56,7 +56,6 @@
             this.lblName.Size = new System.Drawing.Size(33, 16);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Имя";
-            this.lblName.Click += new System.EventHandler(this.lblName_Click);
             // 
             // lblSpeciality
             // 
@@ -149,7 +148,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(706, 298);
             this.dataGridView1.TabIndex = 11;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // chart1
             // 
@@ -187,7 +185,7 @@
             this.Controls.Add(this.lblName);
             this.Name = "Form2";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            //this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);

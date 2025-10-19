@@ -7,3 +7,24 @@ T:\VS\Projects\DecanatPROFramework\BusinessLogic\obj\Debug\Business Logic.csproj
 T:\VS\Projects\DecanatPROFramework\BusinessLogic\obj\Debug\Business.31A8D8CC.Up2Date
 T:\VS\Projects\DecanatPROFramework\BusinessLogic\obj\Debug\BusinessLogic.dll
 T:\VS\Projects\DecanatPROFramework\BusinessLogic\obj\Debug\BusinessLogic.pdb
+D:\Desktop\DekPro\DekanatPro\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\Desktop\DekPro\DekanatPro\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\Desktop\DekPro\DekanatPro\BusinessLogic\bin\Debug\Model.dll
+D:\Desktop\DekPro\DekanatPro\BusinessLogic\bin\Debug\Model.pdb
+D:\Desktop\DekPro\DekanatPro\BusinessLogic\obj\Debug\Business Logic.csproj.AssemblyReference.cache
+D:\Desktop\DekPro\DekanatPro\BusinessLogic\obj\Debug\Business Logic.csproj.CoreCompileInputs.cache
+D:\Desktop\DekPro\DekanatPro\BusinessLogic\obj\Debug\Business.31A8D8CC.Up2Date
+D:\Desktop\DekPro\DekanatPro\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\Desktop\DekPro\DekanatPro\BusinessLogic\obj\Debug\BusinessLogic.pdb
+D:\Desktop\DekPro\DekanatPro\BusinessLogic\bin\Debug\Database1.mdf
+D:\Desktop\DekPro\DekanatPro\BusinessLogic\bin\Debug\Database1_log.ldf
+D:\Desktop\DekPro\DekanatPro\BusinessLogic\bin\Debug\DataAccessLayer.dll
+D:\Desktop\DekPro\DekanatPro\BusinessLogic\bin\Debug\Dapper.dll
+D:\Desktop\DekPro\DekanatPro\BusinessLogic\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Desktop\DekPro\DekanatPro\BusinessLogic\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Desktop\DekPro\DekanatPro\BusinessLogic\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Desktop\DekPro\DekanatPro\BusinessLogic\bin\Debug\DataAccessLayer.pdb
+D:\Desktop\DekPro\DekanatPro\BusinessLogic\bin\Debug\Dapper.xml
+D:\Desktop\DekPro\DekanatPro\BusinessLogic\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Desktop\DekPro\DekanatPro\BusinessLogic\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Desktop\DekPro\DekanatPro\BusinessLogic\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml

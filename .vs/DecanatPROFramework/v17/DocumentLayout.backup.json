@@ -1,0 +1,146 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Desktop\\DekPro\\DekanatPro\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EE733154-30C0-4ADF-9765-B95EF24AF097}|WindowsForm View\\WindowsForm View.csproj|d:\\desktop\\dekpro\\dekanatpro\\windowsform view\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE733154-30C0-4ADF-9765-B95EF24AF097}|WindowsForm View\\WindowsForm View.csproj|solutionrelative:windowsform view\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6392A2F-BC54-4F6A-BECE-0C4DA45CD5F6}|Model\\Model.csproj|d:\\desktop\\dekpro\\dekanatpro\\model\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6392A2F-BC54-4F6A-BECE-0C4DA45CD5F6}|Model\\Model.csproj|solutionrelative:model\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D77DCC9B-E539-4F75-904C-57A397CEB362}|DataAccessLayer\\DataAccessLayer.csproj|D:\\Desktop\\DekPro\\DekanatPro\\dataaccesslayer\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D77DCC9B-E539-4F75-904C-57A397CEB362}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D77DCC9B-E539-4F75-904C-57A397CEB362}|DataAccessLayer\\DataAccessLayer.csproj|D:\\Desktop\\DekPro\\DekanatPro\\dataaccesslayer\\dapperrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D77DCC9B-E539-4F75-904C-57A397CEB362}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\dapperrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A87ED33-C4AC-4046-AECB-2D519BE13C13}|ConsoleVersion\\ConsoleVersion.csproj|D:\\Desktop\\DekPro\\DekanatPro\\consoleversion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A87ED33-C4AC-4046-AECB-2D519BE13C13}|ConsoleVersion\\ConsoleVersion.csproj|solutionrelative:consoleversion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B84897BA-75F8-49DD-9954-2AF949AD4CCB}|BusinessLogic\\Business Logic.csproj|D:\\Desktop\\DekPro\\DekanatPro\\businesslogic\\logic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B84897BA-75F8-49DD-9954-2AF949AD4CCB}|BusinessLogic\\Business Logic.csproj|solutionrelative:businesslogic\\logic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE733154-30C0-4ADF-9765-B95EF24AF097}|WindowsForm View\\WindowsForm View.csproj|D:\\Desktop\\DekPro\\DekanatPro\\windowsform view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE733154-30C0-4ADF-9765-B95EF24AF097}|WindowsForm View\\WindowsForm View.csproj|solutionrelative:windowsform view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Student.cs",
+              "DocumentMoniker": "D:\\Desktop\\DekPro\\DekanatPro\\Model\\Student.cs",
+              "RelativeDocumentMoniker": "Model\\Student.cs",
+              "ToolTip": "D:\\Desktop\\DekPro\\DekanatPro\\Model\\Student.cs",
+              "RelativeToolTip": "Model\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T04:30:42.955Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Logic.cs",
+              "DocumentMoniker": "D:\\Desktop\\DekPro\\DekanatPro\\BusinessLogic\\Logic.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Logic.cs",
+              "ToolTip": "D:\\Desktop\\DekPro\\DekanatPro\\BusinessLogic\\Logic.cs",
+              "RelativeToolTip": "BusinessLogic\\Logic.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwDwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T04:28:59.425Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Desktop\\DekPro\\DekanatPro\\ConsoleVersion\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleVersion\\Program.cs",
+              "ToolTip": "D:\\Desktop\\DekPro\\DekanatPro\\ConsoleVersion\\Program.cs",
+              "RelativeToolTip": "ConsoleVersion\\Program.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAcwJQAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T04:30:39.663Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\Desktop\\DekPro\\DekanatPro\\WindowsForm View\\Form1.cs",
+              "RelativeDocumentMoniker": "WindowsForm View\\Form1.cs",
+              "ToolTip": "D:\\Desktop\\DekPro\\DekanatPro\\WindowsForm View\\Form1.cs",
+              "RelativeToolTip": "WindowsForm View\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T07:21:37.737Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "D:\\Desktop\\DekPro\\DekanatPro\\DataAccessLayer\\IRepository.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\IRepository.cs",
+              "ToolTip": "D:\\Desktop\\DekPro\\DekanatPro\\DataAccessLayer\\IRepository.cs",
+              "RelativeToolTip": "DataAccessLayer\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T08:21:21.581Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "D:\\Desktop\\DekPro\\DekanatPro\\WindowsForm View\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "WindowsForm View\\Form1.Designer.cs",
+              "ToolTip": "D:\\Desktop\\DekPro\\DekanatPro\\WindowsForm View\\Form1.Designer.cs",
+              "RelativeToolTip": "WindowsForm View\\Form1.Designer.cs",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAowLsAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T13:04:43.608Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DapperRepository.cs",
+              "DocumentMoniker": "D:\\Desktop\\DekPro\\DekanatPro\\DataAccessLayer\\DapperRepository.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\DapperRepository.cs",
+              "ToolTip": "D:\\Desktop\\DekPro\\DekanatPro\\DataAccessLayer\\DapperRepository.cs",
+              "RelativeToolTip": "DataAccessLayer\\DapperRepository.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAmwAwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T09:33:56.05Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
