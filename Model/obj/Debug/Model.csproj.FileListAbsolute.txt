@@ -16,3 +16,15 @@ C:\Users\t3mm1k\projects\AIS\DekanatPro\Model\obj\Debug\Model.csproj.AssemblyRef
 C:\Users\t3mm1k\projects\AIS\DekanatPro\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\Users\t3mm1k\projects\AIS\DekanatPro\Model\obj\Debug\Model.dll
 C:\Users\t3mm1k\projects\AIS\DekanatPro\Model\obj\Debug\Model.pdb
+T:\labb\Model\bin\Debug\Model.dll
+T:\labb\Model\bin\Debug\Model.pdb
+T:\labb\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+T:\labb\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+T:\labb\Model\obj\Debug\Model.dll
+T:\labb\Model\obj\Debug\Model.pdb
+T:\labb\Model\bin\Debug\Model.dll.config
+T:\labb\Model\bin\Debug\EntityFramework.dll
+T:\labb\Model\bin\Debug\EntityFramework.SqlServer.dll
+T:\labb\Model\bin\Debug\EntityFramework.xml
+T:\labb\Model\bin\Debug\EntityFramework.SqlServer.xml
+T:\labb\Model\obj\Debug\Model.csproj.Up2Date
