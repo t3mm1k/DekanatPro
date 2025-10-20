@@ -14,17 +14,14 @@ namespace DataAccessLayer
     {
         public static IRepository<Student> CreateRepository(string connectionString = null)
         {
-            // Получаем тип репозитория из конфигурации
             var repositoryTypeConfig = ConfigurationManager.AppSettings["RepositoryType"];
             RepositoryType repositoryType;
             
             if (!Enum.TryParse(repositoryTypeConfig, out repositoryType))
             {
-                // По умолчанию используем Dapper
                 repositoryType = RepositoryType.Dapper;
             }
 
-            // Если строка подключения не указана, берем из конфигурации
             if (string.IsNullOrEmpty(connectionString))
             {
                 connectionString = ConfigurationManager.ConnectionStrings["StudentDbContext"]?.ConnectionString;
