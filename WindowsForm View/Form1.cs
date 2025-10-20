@@ -18,8 +18,6 @@ namespace WinForms_View
         public Form2()
         {
             InitializeComponent();
-
-            // Используем новую логику с фабрикой репозиториев
             logic = new LogicWithFactory();
 
             btnAdd.Click += BtnAdd_Click;
