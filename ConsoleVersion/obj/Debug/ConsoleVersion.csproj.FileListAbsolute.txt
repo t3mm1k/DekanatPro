@@ -10,3 +10,16 @@ T:\VS\Projects\DecanatPROFramework\ConsoleVersion\obj\Debug\ConsoleVersion.cspro
 T:\VS\Projects\DecanatPROFramework\ConsoleVersion\obj\Debug\ConsoleV.9EB05745.Up2Date
 T:\VS\Projects\DecanatPROFramework\ConsoleVersion\obj\Debug\ConsoleVersion.exe
 T:\VS\Projects\DecanatPROFramework\ConsoleVersion\obj\Debug\ConsoleVersion.pdb
+C:\Users\t3mm1k\projects\AIS\DekanatPro\ConsoleVersion\bin\Debug\ConsoleVersion.exe.config
+C:\Users\t3mm1k\projects\AIS\DekanatPro\ConsoleVersion\bin\Debug\ConsoleVersion.exe
+C:\Users\t3mm1k\projects\AIS\DekanatPro\ConsoleVersion\bin\Debug\ConsoleVersion.pdb
+C:\Users\t3mm1k\projects\AIS\DekanatPro\ConsoleVersion\bin\Debug\BusinessLogic.dll
+C:\Users\t3mm1k\projects\AIS\DekanatPro\ConsoleVersion\bin\Debug\Model.dll
+C:\Users\t3mm1k\projects\AIS\DekanatPro\ConsoleVersion\bin\Debug\BusinessLogic.pdb
+C:\Users\t3mm1k\projects\AIS\DekanatPro\ConsoleVersion\bin\Debug\Model.pdb
+C:\Users\t3mm1k\projects\AIS\DekanatPro\ConsoleVersion\obj\Debug\ConsoleVersion.csproj.AssemblyReference.cache
+C:\Users\t3mm1k\projects\AIS\DekanatPro\ConsoleVersion\obj\Debug\ConsoleVersion.exe.config
+C:\Users\t3mm1k\projects\AIS\DekanatPro\ConsoleVersion\obj\Debug\ConsoleVersion.csproj.CoreCompileInputs.cache
+C:\Users\t3mm1k\projects\AIS\DekanatPro\ConsoleVersion\obj\Debug\ConsoleV.9EB05745.Up2Date
+C:\Users\t3mm1k\projects\AIS\DekanatPro\ConsoleVersion\obj\Debug\ConsoleVersion.exe
+C:\Users\t3mm1k\projects\AIS\DekanatPro\ConsoleVersion\obj\Debug\ConsoleVersion.pdb

@@ -1,5 +1,4 @@
-﻿using Microsoft.IdentityModel.Protocols;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,15 +6,12 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    interface IRepository<T> : IDisposable
-            where T : class
+    public interface IRepository<T>
     {
-        IEnumerable<T> GetStudent(); // получение всех объектов
-        T GetStudent(int id); // получение одного объекта по id
-        void Create(T item); // создание объекта
-        void Update(T item); // обновление объекта
-        void Delete(int id); // удаление объекта по id
-        void Save();  // сохранение изменений
+        void Create(T item);
+        IEnumerable<T> ReadAll();
+        T ReadById(string id);
+        void Update(T item);
+        void Delete(string id);
     }
-
 }

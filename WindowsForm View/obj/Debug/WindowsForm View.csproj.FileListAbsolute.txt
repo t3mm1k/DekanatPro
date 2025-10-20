@@ -13,3 +13,19 @@ T:\VS\Projects\DecanatPROFramework\WindowsForm View\bin\Debug\Model.pdb
 T:\VS\Projects\DecanatPROFramework\WindowsForm View\obj\Debug\WindowsF.872E5E42.Up2Date
 T:\VS\Projects\DecanatPROFramework\WindowsForm View\obj\Debug\WindowsForm View.exe
 T:\VS\Projects\DecanatPROFramework\WindowsForm View\obj\Debug\WindowsForm View.pdb
+C:\Users\t3mm1k\projects\AIS\DekanatPro\WindowsForm View\bin\Debug\WindowsForm View.exe.config
+C:\Users\t3mm1k\projects\AIS\DekanatPro\WindowsForm View\bin\Debug\WindowsForm View.exe
+C:\Users\t3mm1k\projects\AIS\DekanatPro\WindowsForm View\bin\Debug\WindowsForm View.pdb
+C:\Users\t3mm1k\projects\AIS\DekanatPro\WindowsForm View\bin\Debug\BusinessLogic.dll
+C:\Users\t3mm1k\projects\AIS\DekanatPro\WindowsForm View\bin\Debug\Model.dll
+C:\Users\t3mm1k\projects\AIS\DekanatPro\WindowsForm View\bin\Debug\BusinessLogic.pdb
+C:\Users\t3mm1k\projects\AIS\DekanatPro\WindowsForm View\bin\Debug\Model.pdb
+C:\Users\t3mm1k\projects\AIS\DekanatPro\WindowsForm View\obj\Debug\WindowsForm View.csproj.AssemblyReference.cache
+C:\Users\t3mm1k\projects\AIS\DekanatPro\WindowsForm View\obj\Debug\WindowsForm View.exe.config
+C:\Users\t3mm1k\projects\AIS\DekanatPro\WindowsForm View\obj\Debug\WinForms_View.Form2.resources
+C:\Users\t3mm1k\projects\AIS\DekanatPro\WindowsForm View\obj\Debug\WindowsForm_View.Properties.Resources.resources
+C:\Users\t3mm1k\projects\AIS\DekanatPro\WindowsForm View\obj\Debug\WindowsForm View.csproj.GenerateResource.cache
+C:\Users\t3mm1k\projects\AIS\DekanatPro\WindowsForm View\obj\Debug\WindowsForm View.csproj.CoreCompileInputs.cache
+C:\Users\t3mm1k\projects\AIS\DekanatPro\WindowsForm View\obj\Debug\WindowsF.872E5E42.Up2Date
+C:\Users\t3mm1k\projects\AIS\DekanatPro\WindowsForm View\obj\Debug\WindowsForm View.exe
+C:\Users\t3mm1k\projects\AIS\DekanatPro\WindowsForm View\obj\Debug\WindowsForm View.pdb

@@ -1,11 +1,16 @@
-﻿using Model;
-public class Student : IDomainObject
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+public class Student
 {
-    public int Id { get; set; }
     public string Name { get; set; }
     public string Speciality { get; set; }
     public string Group { get; set; }
+    
+    [Key]
     public string StudentNumber { get; set; }
+
+    public Student() { }
 
     public Student(string name, string speciality, string group, string studentNumber)
     {
@@ -14,5 +19,4 @@ public class Student : IDomainObject
         Group = group;
         StudentNumber = studentNumber;
     }
-
 }
