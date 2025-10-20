@@ -28,3 +28,27 @@ D:\Desktop\DekPro\DekanatPro\BusinessLogic\bin\Debug\Dapper.xml
 D:\Desktop\DekPro\DekanatPro\BusinessLogic\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
 D:\Desktop\DekPro\DekanatPro\BusinessLogic\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Desktop\DekPro\DekanatPro\BusinessLogic\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\t3mm1k\projects\AIS\DekanatPro\BusinessLogic\obj\Debug\BusinessLogic.dll
+C:\Users\t3mm1k\projects\AIS\DekanatPro\BusinessLogic\obj\Debug\BusinessLogic.pdb
+C:\Users\t3mm1k\projects\AIS\DekanatPro\BusinessLogic\obj\Debug\Business Logic.csproj.AssemblyReference.cache
+C:\Users\t3mm1k\projects\AIS\DekanatPro\BusinessLogic\obj\Debug\Business Logic.csproj.CoreCompileInputs.cache
+C:\Users\t3mm1k\projects\AIS\DekanatPro\BusinessLogic\bin\Debug\Database1.mdf
+C:\Users\t3mm1k\projects\AIS\DekanatPro\BusinessLogic\bin\Debug\Database1_log.ldf
+C:\Users\t3mm1k\projects\AIS\DekanatPro\BusinessLogic\bin\Debug\BusinessLogic.dll
+C:\Users\t3mm1k\projects\AIS\DekanatPro\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\Users\t3mm1k\projects\AIS\DekanatPro\BusinessLogic\bin\Debug\DataAccessLayer.dll
+C:\Users\t3mm1k\projects\AIS\DekanatPro\BusinessLogic\bin\Debug\Model.dll
+C:\Users\t3mm1k\projects\AIS\DekanatPro\BusinessLogic\bin\Debug\EntityFramework.dll
+C:\Users\t3mm1k\projects\AIS\DekanatPro\BusinessLogic\bin\Debug\Dapper.dll
+C:\Users\t3mm1k\projects\AIS\DekanatPro\BusinessLogic\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\t3mm1k\projects\AIS\DekanatPro\BusinessLogic\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\t3mm1k\projects\AIS\DekanatPro\BusinessLogic\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\t3mm1k\projects\AIS\DekanatPro\BusinessLogic\bin\Debug\DataAccessLayer.pdb
+C:\Users\t3mm1k\projects\AIS\DekanatPro\BusinessLogic\bin\Debug\DataAccessLayer.dll.config
+C:\Users\t3mm1k\projects\AIS\DekanatPro\BusinessLogic\bin\Debug\Model.pdb
+C:\Users\t3mm1k\projects\AIS\DekanatPro\BusinessLogic\bin\Debug\EntityFramework.xml
+C:\Users\t3mm1k\projects\AIS\DekanatPro\BusinessLogic\bin\Debug\Dapper.xml
+C:\Users\t3mm1k\projects\AIS\DekanatPro\BusinessLogic\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\t3mm1k\projects\AIS\DekanatPro\BusinessLogic\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\t3mm1k\projects\AIS\DekanatPro\BusinessLogic\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\t3mm1k\projects\AIS\DekanatPro\BusinessLogic\obj\Debug\Business.31A8D8CC.Up2Date

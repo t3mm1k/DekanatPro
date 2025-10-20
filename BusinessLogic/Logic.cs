@@ -2,6 +2,7 @@
 using System.Data;
 using System.Linq;
 using DataAccessLayer;
+using Model;
 
 namespace Business_Logic
 {

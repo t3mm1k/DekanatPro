@@ -6,23 +6,21 @@ using System.Windows.Forms.DataVisualization.Charting;
 using System.Xml.Linq;
 using Business_Logic;
 using DataAccessLayer; 
-//using Model;
+using Model;
 
 
 namespace WinForms_View
 {
     public partial class Form2 : Form
     {
-        private Logic logic;
+        private LogicWithFactory logic;
 
         public Form2()
         {
             InitializeComponent();
 
-            string conn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Desktop\DekPro\DekanatPro\DataAccessLayer\Database1.mdf;Integrated Security=True";
-
-            IRepository<Student> repo = new DapperRepository(conn);
-            logic = new Logic(repo);
+            // Используем новую логику с фабрикой репозиториев
+            logic = new LogicWithFactory();
 
             btnAdd.Click += BtnAdd_Click;
             btnDelete.Click += BtnDelete_Click;

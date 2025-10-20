@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 using DataAccessLayer;
+using Model;
 
 
 namespace ConsoleVersion
@@ -17,11 +18,8 @@ namespace ConsoleVersion
         {
             try
             {
-                string conn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Desktop\DekPro\DekanatPro\DataAccessLayer\Database1.mdf;Integrated Security=True";
-
-                IRepository<Student> repo = new DapperRepository(conn);
-
-                Logic logic = new Logic(repo);
+                // Используем новую логику с фабрикой репозиториев
+                LogicWithFactory logic = new LogicWithFactory();
 
                 while (true)
                 {
@@ -67,7 +65,7 @@ namespace ConsoleVersion
             }
         }
 
-        private static void AddStudentMenu(Logic logic)
+        private static void AddStudentMenu(LogicWithFactory logic)
         {
             Console.Write("Имя: ");
             string name = Console.ReadLine();
@@ -89,7 +87,7 @@ namespace ConsoleVersion
             }
         }
 
-        private static void DeleteStudentMenu(Logic logic)
+        private static void DeleteStudentMenu(LogicWithFactory logic)
         {
             Console.Write("Номер студенческого: ");
             string delNum = Console.ReadLine();
@@ -97,7 +95,7 @@ namespace ConsoleVersion
             Console.WriteLine("Студент удалён!");
         }
 
-        private static void ShowAllStudents(Logic logic)
+        private static void ShowAllStudents(LogicWithFactory logic)
         {
             var students = logic.GetAllStudents();
             Console.WriteLine("\nСписок студентов:");
@@ -107,7 +105,7 @@ namespace ConsoleVersion
             }
         }
 
-        private static void ShowHistogram(Logic logic)
+        private static void ShowHistogram(LogicWithFactory logic)
         {
             var histogram = logic.GetHistogram();
             if (histogram.Count == 0)

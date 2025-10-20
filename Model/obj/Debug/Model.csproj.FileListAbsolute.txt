@@ -10,3 +10,9 @@ D:\Desktop\DekPro\DekanatPro\Model\obj\Debug\Model.csproj.AssemblyReference.cach
 D:\Desktop\DekPro\DekanatPro\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 D:\Desktop\DekPro\DekanatPro\Model\obj\Debug\Model.dll
 D:\Desktop\DekPro\DekanatPro\Model\obj\Debug\Model.pdb
+C:\Users\t3mm1k\projects\AIS\DekanatPro\Model\bin\Debug\Model.dll
+C:\Users\t3mm1k\projects\AIS\DekanatPro\Model\bin\Debug\Model.pdb
+C:\Users\t3mm1k\projects\AIS\DekanatPro\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\t3mm1k\projects\AIS\DekanatPro\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\t3mm1k\projects\AIS\DekanatPro\Model\obj\Debug\Model.dll
+C:\Users\t3mm1k\projects\AIS\DekanatPro\Model\obj\Debug\Model.pdb

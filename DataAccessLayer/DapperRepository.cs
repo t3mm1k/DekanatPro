@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using Dapper;
+using Model;
     
 
 namespace DataAccessLayer
