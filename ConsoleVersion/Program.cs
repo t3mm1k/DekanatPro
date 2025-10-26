@@ -5,131 +5,143 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Business_Logic;
-using System.Data;
+using System.Configuration;
+using DataAccessLayer;
+using Model;
+
 
 namespace ConsoleVersion
 {
-    internal class Program
+    class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Logic logic = new Logic();
-            logic.AddStudent("Подкур Артем", "ПИ", "КИ24-21Б", "1");
-            logic.AddStudent("Трачук Дмитрий", "ПИ", "КИ24-21Б", "2");
-            logic.AddStudent("Тимофеев Александр", "ПИ", "КИ24-21Б", "3");
-
-
-            logic.AddStudent("Попов Дмитрий", "ИВТ", "КИ24-06Б", "4");
-            logic.AddStudent("Иванов Михаил", "ИВТ", "КИ24-06Б", "5");
-            // logic.AddStudent("Капустин Генадий", "ИВТ", "КИ24-О6Б", "6");
-            while (true)
+            try
             {
-                Console.WriteLine("Меню");
-                Console.WriteLine("1. Добавить студента");
-                Console.WriteLine("2. Удалить студента");
-                Console.WriteLine("3. Показать таблицу студентов");
-                Console.WriteLine("4. Показать гистограмму");
-                Console.WriteLine("5. Выход");
-                Console.Write("Выберите действие: ");
-                string choice = Console.ReadLine();
-                switch (choice)
-                {
-                    case "1":
-                        Console.Write("Имя студента: ");
-                        string name = Console.ReadLine();
-                        Console.Write("Специальность: ");
-                        string speciality = Console.ReadLine();
-                        Console.Write("Группа: ");
-                        string group = Console.ReadLine(); ;
-                        Console.Write("Номер студенческого билета: ");
-                        string studentNumber = Console.ReadLine();
-                        logic.AddStudent(name, speciality, group, studentNumber);
-                        Console.WriteLine("Студент добавлен!\n");
-                        break;
-                    case "2":
-                        Console.Write("Номер студенческого билета: ");
-                        string studentnumber = Console.ReadLine();
-                        logic.DeleteStudent(studentnumber);
+                // Используем новую логику с фабрикой репозиториев
+                LogicWithFactory logic = new LogicWithFactory();
 
-                        Console.WriteLine("Студент добавлен!\n");
-                        break;
-                    case "3":
-                        Console.WriteLine(SheetToString(logic.GetSheet()));
-                        break;
-                    case "4":
-                        Console.WriteLine(HistogramToString(logic.GetHistogram()));
-                        break;
-                    case "5":
-                        return;
+                while (true)
+                {
+                    Console.WriteLine("\nМеню:");
+                    Console.WriteLine("1. Добавить студента");
+                    Console.WriteLine("2. Удалить студента");
+                    Console.WriteLine("3. Показать всех студентов");
+                    Console.WriteLine("4. Показать гистограмму по специальностям");
+                    Console.WriteLine("5. Выход");
+                    Console.Write("Выберите действие: ");
+                    string choice = Console.ReadLine();
+
+                    switch (choice)
+                    {
+                        case "1":
+                            AddStudentMenu(logic);
+                            break;
+
+                        case "2":
+                            DeleteStudentMenu(logic);
+                            break;
+
+                        case "3":
+                            ShowAllStudents(logic);
+                            break;
+
+                        case "4":
+                            ShowHistogram(logic);
+                            break;
+
+                        case "5":
+                            return;
+
+                        default:
+                            Console.WriteLine("Неверный выбор!");
+                            break;
+                    }
                 }
             }
-
-
-            string HistogramToString(Dictionary<string, int> histogram)
+            catch (Exception ex)
             {
-                if (histogram.Count == 0)
-                    return "Нет данных";
+                Console.WriteLine($"Ошибка: {ex.Message}");
+            }
+        }
 
-                int max = histogram.Values.Max();
-                var keys = histogram.Keys.ToList();
+        private static void AddStudentMenu(LogicWithFactory logic)
+        {
+            Console.Write("Имя: ");
+            string name = Console.ReadLine();
+            Console.Write("Специальность: ");
+            string spec = Console.ReadLine();
+            Console.Write("Группа: ");
+            string group = Console.ReadLine();
+            Console.Write("Номер студенческого: ");
+            string num = Console.ReadLine();
 
-                var sb = new System.Text.StringBuilder();
+            if (logic.CanAddStudent(num))
+            {
+                logic.AddStudent(new Student(name, spec, group, num));
+                Console.WriteLine("Студент добавлен!");
+            }
+            else
+            {
+                Console.WriteLine("Студент с таким номером уже существует!");
+            }
+        }
 
-                for (int level = max; level >= 1; level--)
-                {
-                    foreach (var key in keys)
-                    {
-                        if (histogram[key] >= level)
-                            sb.Append("  *  ");
-                        else
-                            sb.Append("     ");
-                    }
-                    sb.AppendLine();
-                }
+        private static void DeleteStudentMenu(LogicWithFactory logic)
+        {
+            Console.Write("Номер студенческого: ");
+            string delNum = Console.ReadLine();
+            logic.DeleteStudent(delNum);
+            Console.WriteLine("Студент удалён!");
+        }
 
-                sb.AppendLine(new string('-', keys.Count * 5));
-                int maxKeyLen = keys.Max(k => k.Length);
+        private static void ShowAllStudents(LogicWithFactory logic)
+        {
+            var students = logic.GetAllStudents();
+            Console.WriteLine("\nСписок студентов:");
+            foreach (var s in students)
+            {
+                Console.WriteLine($"{s.StudentNumber}: {s.Name} - {s.Speciality} ({s.Group})");
+            }
+        }
 
-                for (int i = 0; i < maxKeyLen; i++)
-                {
-                    foreach (var key in keys)
-                    {
-                        if (i < key.Length)
-                            sb.Append($"  {key[i]}  ");
-                        else
-                            sb.Append("     ");
-                    }
-                    sb.AppendLine();
-                }
-
-                return sb.ToString();
+        private static void ShowHistogram(LogicWithFactory logic)
+        {
+            var histogram = logic.GetHistogram();
+            if (histogram.Count == 0)
+            {
+                Console.WriteLine("Нет данных для построения гистограммы.");
+                return;
             }
 
+            int max = 0;
+            foreach (var val in histogram.Values)
+                if (val > max) max = val;
 
-             string SheetToString(DataTable table)
+            var keys = new List<string>(histogram.Keys);
+
+            for (int level = max; level >= 1; level--)
             {
-                string result = "";
-                foreach (DataColumn col in table.Columns)
+                foreach (var key in keys)
                 {
-                    result += $"{col.ColumnName}\t";
+                    Console.Write(histogram[key] >= level ? "  *  " : "     ");
                 }
-
-                result += "\n";
-
-                foreach (DataRow row in table.Rows)
-                {
-                    foreach (var item in row.ItemArray)
-                    {
-                        result += $"{item}\t";
-                    }
-                    result += "\n";
-                }
-                return result;
+                Console.WriteLine();
             }
 
-            // DataTable sheet = logic.getHistogram();
+            Console.WriteLine(new string('-', keys.Count * 5));
+            int maxKeyLen = 0;
+            foreach (var k in keys)
+                if (k.Length > maxKeyLen) maxKeyLen = k.Length;
 
+            for (int i = 0; i < maxKeyLen; i++)
+            {
+                foreach (var key in keys)
+                {
+                    Console.Write(i < key.Length ? $"  {key[i]}  " : "     ");
+                }
+                Console.WriteLine();
+            }
         }
     }
-}
+}  
