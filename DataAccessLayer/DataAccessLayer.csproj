@@ -79,7 +79,6 @@
     <Compile Include="DapperRepository.cs" />
     <Compile Include="EntityRepository.cs" />
     <Compile Include="IRepository.cs" />
-    <Compile Include="RepositoryFactory.cs" />
     <Compile Include="StudentDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

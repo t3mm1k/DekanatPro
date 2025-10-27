@@ -28,3 +28,9 @@ T:\labb\Model\bin\Debug\EntityFramework.SqlServer.dll
 T:\labb\Model\bin\Debug\EntityFramework.xml
 T:\labb\Model\bin\Debug\EntityFramework.SqlServer.xml
 T:\labb\Model\obj\Debug\Model.csproj.Up2Date
+C:\Users\t3mm1k\projects\AIS\DekanatPro\Model\bin\Debug\Model.dll.config
+C:\Users\t3mm1k\projects\AIS\DekanatPro\Model\bin\Debug\EntityFramework.dll
+C:\Users\t3mm1k\projects\AIS\DekanatPro\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\t3mm1k\projects\AIS\DekanatPro\Model\bin\Debug\EntityFramework.xml
+C:\Users\t3mm1k\projects\AIS\DekanatPro\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\t3mm1k\projects\AIS\DekanatPro\Model\obj\Debug\Model.csproj.Up2Date

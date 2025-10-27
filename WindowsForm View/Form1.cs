@@ -13,12 +13,12 @@ namespace WinForms_View
 {
     public partial class Form2 : Form
     {
-        private LogicWithFactory logic;
+        private Logic logic;
 
         public Form2()
         {
             InitializeComponent();
-            logic = new LogicWithFactory();
+            logic = new Logic();
 
             btnAdd.Click += BtnAdd_Click;
             btnDelete.Click += BtnDelete_Click;
