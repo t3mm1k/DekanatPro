@@ -37,24 +37,16 @@ namespace WinForms_View
         {
             if (string.IsNullOrWhiteSpace(txtName.Text) ||
                 string.IsNullOrWhiteSpace(txtSpeciality.Text) ||
-                string.IsNullOrWhiteSpace(txtGroup.Text) ||
-                string.IsNullOrWhiteSpace(txtStudentNumber.Text))
+                string.IsNullOrWhiteSpace(txtGroup.Text))
             {
                 MessageBox.Show("Заполните все поля!");
-                return;
-            }
-
-            if (!logic.CanAddStudent(txtStudentNumber.Text))
-            {
-                MessageBox.Show("Студент с таким номером уже существует!");
                 return;
             }
 
             var student = new Student(
                 txtName.Text,
                 txtSpeciality.Text,
-                txtGroup.Text,
-                txtStudentNumber.Text
+                txtGroup.Text
             );
 
             logic.AddStudent(student);
@@ -67,18 +59,24 @@ namespace WinForms_View
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtStudentNumber.Text))
+            if (dataGridView1.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Введите номер студенческого для удаления!");
+                MessageBox.Show("Выберите студента для удаления!");
                 return;
             }
 
-            logic.DeleteStudent(txtStudentNumber.Text);
-
-            RefreshGrid();
-            BuildChart();
-
-            MessageBox.Show("Студент удалён!");
+            var selectedRow = dataGridView1.SelectedRows[0];
+            if (selectedRow.Cells["Id"].Value != null && int.TryParse(selectedRow.Cells["Id"].Value.ToString(), out int id))
+            {
+                logic.DeleteStudent(id);
+                RefreshGrid();
+                BuildChart();
+                MessageBox.Show("Студент удалён!");
+            }
+            else
+            {
+                MessageBox.Show("Ошибка при получении ID студента!");
+            }
         }
 
         private void BtnShowHistogram_Click(object sender, EventArgs e)

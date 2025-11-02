@@ -28,3 +28,15 @@ T:\labb\Model\bin\Debug\EntityFramework.SqlServer.dll
 T:\labb\Model\bin\Debug\EntityFramework.xml
 T:\labb\Model\bin\Debug\EntityFramework.SqlServer.xml
 T:\labb\Model\obj\Debug\Model.csproj.Up2Date
+D:\Desktop\decwork\DekanatPro\Model\bin\Debug\Model.dll.config
+D:\Desktop\decwork\DekanatPro\Model\bin\Debug\Model.dll
+D:\Desktop\decwork\DekanatPro\Model\bin\Debug\Model.pdb
+D:\Desktop\decwork\DekanatPro\Model\bin\Debug\EntityFramework.dll
+D:\Desktop\decwork\DekanatPro\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Desktop\decwork\DekanatPro\Model\bin\Debug\EntityFramework.xml
+D:\Desktop\decwork\DekanatPro\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Desktop\decwork\DekanatPro\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+D:\Desktop\decwork\DekanatPro\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\Desktop\decwork\DekanatPro\Model\obj\Debug\Model.csproj.Up2Date
+D:\Desktop\decwork\DekanatPro\Model\obj\Debug\Model.dll
+D:\Desktop\decwork\DekanatPro\Model\obj\Debug\Model.pdb

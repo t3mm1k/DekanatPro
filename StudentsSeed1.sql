@@ -1,8 +1,5 @@
-﻿INSERT INTO Students (StudentNumber, Name, Speciality, [Group]) 
-VALUES ('1', 'Подкур Артем', 'ПИ', 'КИ24-21Б');
-
-INSERT INTO Students (StudentNumber, Name, Speciality, [Group]) 
-VALUES ('2', 'Трачук Дмитрий', 'ПИ', 'КИ24-21Б');
-
-INSERT INTO Students (StudentNumber, Name, Speciality, [Group]) 
-VALUES ('3', 'Ivan Ivanovich', 'ISD', 'КИ24-06Б');
+﻿INSERT INTO Students (Name, Speciality, [Group])
+VALUES 
+(N'Подкур Артем', N'ПИ', N'КИ24-21Б'),
+(N'Трачук Дмитрий', N'ПИ', N'КИ24-21Б'),
+(N'Иван Иванов', N'ИСД', N'КИ24-06Б');

@@ -34,11 +34,9 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblSpeciality = new System.Windows.Forms.Label();
             this.lblGroup = new System.Windows.Forms.Label();
-            this.lblStudentNumber = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtSpeciality = new System.Windows.Forms.TextBox();
             this.txtGroup = new System.Windows.Forms.TextBox();
-            this.txtStudentNumber = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnShowHistogram = new System.Windows.Forms.Button();
@@ -75,15 +73,6 @@
             this.lblGroup.TabIndex = 2;
             this.lblGroup.Text = "Группа";
             // 
-            // lblStudentNumber
-            // 
-            this.lblStudentNumber.AutoSize = true;
-            this.lblStudentNumber.Location = new System.Drawing.Point(52, 198);
-            this.lblStudentNumber.Name = "lblStudentNumber";
-            this.lblStudentNumber.Size = new System.Drawing.Size(84, 16);
-            this.lblStudentNumber.TabIndex = 3;
-            this.lblStudentNumber.Text = "Студ. билет";
-            // 
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(196, 28);
@@ -104,13 +93,6 @@
             this.txtGroup.Name = "txtGroup";
             this.txtGroup.Size = new System.Drawing.Size(100, 22);
             this.txtGroup.TabIndex = 6;
-            // 
-            // txtStudentNumber
-            // 
-            this.txtStudentNumber.Location = new System.Drawing.Point(217, 191);
-            this.txtStudentNumber.Name = "txtStudentNumber";
-            this.txtStudentNumber.Size = new System.Drawing.Size(100, 22);
-            this.txtStudentNumber.TabIndex = 7;
             // 
             // btnAdd
             // 
@@ -175,11 +157,9 @@
             this.Controls.Add(this.btnShowHistogram);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.txtStudentNumber);
             this.Controls.Add(this.txtGroup);
             this.Controls.Add(this.txtSpeciality);
             this.Controls.Add(this.txtName);
-            this.Controls.Add(this.lblStudentNumber);
             this.Controls.Add(this.lblGroup);
             this.Controls.Add(this.lblSpeciality);
             this.Controls.Add(this.lblName);
@@ -198,11 +178,9 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblSpeciality;
         private System.Windows.Forms.Label lblGroup;
-        private System.Windows.Forms.Label lblStudentNumber;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtSpeciality;
         private System.Windows.Forms.TextBox txtGroup;
-        private System.Windows.Forms.TextBox txtStudentNumber;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnShowHistogram;
