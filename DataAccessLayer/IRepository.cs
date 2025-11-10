@@ -13,8 +13,8 @@ namespace DataAccessLayer
     {
         void Create(T item);
         IEnumerable<T> ReadAll();
-        T ReadById(string id);
+        T ReadById(int id);
         void Update(T item);
-        void Delete(string id);
+        void Delete(int id);
     }
 }

@@ -32,15 +32,16 @@ namespace DataAccessLayer
         {
             using (var conn = CreateConnection())
             {
-                string sql = @"INSERT INTO Students (StudentNumber, Name, Speciality, [Group])
-                               VALUES (@StudentNumber, @Name, @Speciality, @Group)";
-                conn.Execute(sql, new
+                string sql = @"INSERT INTO Students (Name, Speciality, [Group])
+                               VALUES (@Name, @Speciality, @Group);
+                               SELECT CAST(SCOPE_IDENTITY() as int)";
+                var id = conn.QuerySingle<int>(sql, new
                 {
-                    item.StudentNumber,
                     item.Name,
                     item.Speciality,
                     Group = item.Group
                 });
+                item.Id = id;
             }
         }
 
@@ -48,16 +49,16 @@ namespace DataAccessLayer
         {
             using (var conn = CreateConnection())
             {
-                string sql = "SELECT StudentNumber, Name, Speciality, [Group] FROM Students";
+                string sql = "SELECT Id, Name, Speciality, [Group] FROM Students";
                 return conn.Query<Student>(sql).ToList();
             }
         }
 
-        public Student ReadById(string id)
+        public Student ReadById(int id)
         {
             using (var conn = CreateConnection())
             {
-                string sql = "SELECT StudentNumber, Name, Speciality, [Group] FROM Students WHERE StudentNumber = @Id";
+                string sql = "SELECT Id, Name, Speciality, [Group] FROM Students WHERE Id = @Id";
                 return conn.QueryFirstOrDefault<Student>(sql, new { Id = id });
             }
         }
@@ -70,22 +71,22 @@ namespace DataAccessLayer
                                SET Name = @Name,
                                    Speciality = @Speciality,
                                    [Group] = @Group
-                               WHERE StudentNumber = @StudentNumber";
+                               WHERE Id = @Id";
                 conn.Execute(sql, new
                 {
+                    item.Id,
                     item.Name,
                     item.Speciality,
-                    Group = item.Group,
-                    item.StudentNumber
+                    Group = item.Group
                 });
             }
         }
 
-        public void Delete(string id)
+        public void Delete(int id)
         {
             using (var conn = CreateConnection())
             {
-                string sql = "DELETE FROM Students WHERE StudentNumber = @Id";
+                string sql = "DELETE FROM Students WHERE Id = @Id";
                 conn.Execute(sql, new { Id = id });
             }
         }

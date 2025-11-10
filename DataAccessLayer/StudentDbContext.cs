@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using Model;
 
@@ -18,7 +19,11 @@ namespace DataAccessLayer
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Student>()
-                .HasKey(s => s.StudentNumber);
+                .HasKey(s => s.Id);
+
+            modelBuilder.Entity<Student>()
+                .Property(s => s.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
             modelBuilder.Entity<Student>()
                 .Property(s => s.Name)
@@ -34,11 +39,6 @@ namespace DataAccessLayer
                 .Property(s => s.Group)
                 .IsRequired()
                 .HasMaxLength(50);
-
-            modelBuilder.Entity<Student>()
-                .Property(s => s.StudentNumber)
-                .IsRequired()
-                .HasMaxLength(20);
 
             modelBuilder.Entity<Student>()
                 .ToTable("Students");

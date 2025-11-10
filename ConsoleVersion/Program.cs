@@ -78,26 +78,24 @@ namespace ConsoleVersion
             string spec = Console.ReadLine();
             Console.Write("Группа: ");
             string group = Console.ReadLine();
-            Console.Write("Номер студенческого: ");
-            string num = Console.ReadLine();
 
-            if (logic.CanAddStudent(num))
-            {
-                logic.AddStudent(new Student(name, spec, group, num));
-                Console.WriteLine("Студент добавлен!");
-            }
-            else
-            {
-                Console.WriteLine("Студент с таким номером уже существует!");
-            }
+            logic.AddStudent(new Student(name, spec, group));
+            Console.WriteLine("Студент добавлен!");
         }
 
         private static void DeleteStudentMenu(Logic logic)
         {
-            Console.Write("Номер студенческого: ");
-            string delNum = Console.ReadLine();
-            logic.DeleteStudent(delNum);
-            Console.WriteLine("Студент удалён!");
+            Console.Write("Id студента: ");
+            string idStr = Console.ReadLine();
+            if (int.TryParse(idStr, out int id))
+            {
+                logic.DeleteStudent(id);
+                Console.WriteLine("Студент удалён!");
+            }
+            else
+            {
+                Console.WriteLine("Неверный формат ID!");
+            }
         }
 
         private static void ShowAllStudents(Logic logic)
@@ -106,7 +104,7 @@ namespace ConsoleVersion
             Console.WriteLine("\nСписок студентов:");
             foreach (var s in students)
             {
-                Console.WriteLine($"{s.StudentNumber}: {s.Name} - {s.Speciality} ({s.Group})");
+                Console.WriteLine($"{s.Id}: {s.Name} - {s.Speciality} ({s.Group})");
             }
         }
 

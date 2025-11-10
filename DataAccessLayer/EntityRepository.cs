@@ -26,7 +26,7 @@ namespace DataAccessLayer
             }
         }
 
-        public Student ReadById(string id)
+        public Student ReadById(int id)
         {
             using (var context = new StudentDbContext(_connectionString))
             {
@@ -38,7 +38,7 @@ namespace DataAccessLayer
         {
             using (var context = new StudentDbContext(_connectionString))
             {
-                var existingStudent = context.Students.Find(item.StudentNumber);
+                var existingStudent = context.Students.Find(item.Id);
                 if (existingStudent != null)
                 {
                     context.Entry(existingStudent).CurrentValues.SetValues(item);
@@ -47,7 +47,7 @@ namespace DataAccessLayer
             }
         }
 
-        public void Delete(string id)
+        public void Delete(int id)
         {
             using (var context = new StudentDbContext(_connectionString))
             {

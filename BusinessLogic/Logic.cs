@@ -19,18 +19,17 @@ namespace Business_Logic
 
         public void AddStudent(Student student)
         {
-            if (repository.ReadById(student.StudentNumber) == null)
-                repository.Create(student);
+            _repository.Create(student);
         }
 
-        public bool CanAddStudent(string studentNumber)
+        public bool CanAddStudent(int id)
         {
-            return repository.ReadById(studentNumber) == null;
+            return _repository.ReadById(id) == null;
         }
 
-        public void DeleteStudent(string studentNumber)
+        public void DeleteStudent(int id)
         {
-            repository.Delete(studentNumber);
+            _repository.Delete(id);
         }
 
         public List<Student> GetAllStudents()
@@ -42,13 +41,13 @@ namespace Business_Logic
         {
             var students = repository.ReadAll();
             DataTable sheet = new DataTable();
+            sheet.Columns.Add("Id", typeof(int));
             sheet.Columns.Add("Имя", typeof(string));
             sheet.Columns.Add("Специальность", typeof(string));
             sheet.Columns.Add("Группа", typeof(string));
-            sheet.Columns.Add("Студ. Билет", typeof(string));
 
             foreach (var s in students)
-                sheet.Rows.Add(s.Name, s.Speciality, s.Group, s.StudentNumber);
+                sheet.Rows.Add(s.Id, s.Name, s.Speciality, s.Group);
 
             return sheet;
         }
