@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using DataAccessLayer;
@@ -8,7 +9,13 @@ namespace Business_Logic
 {
     public class Logic
     {
-        private readonly IRepository<Student> repository = new EntityRepository("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\t3mm1k\\projects\\AIS\\DekanatPro\\DataAccessLayer\\Database1.mdf;Integrated Security=True");
+        private readonly IRepository<Student> repository;
+
+        public Logic(IRepository<Student> repository)
+        {
+            Console.WriteLine(nameof(repository));
+            this.repository = repository;
+        }
 
         public void AddStudent(Student student)
         {
