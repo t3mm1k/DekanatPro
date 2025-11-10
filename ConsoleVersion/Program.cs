@@ -1,11 +1,14 @@
 ﻿using Business_Logic;
 using System;
+using Model;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
+using Ninject;
+using DataAccessLayer;
 
 
 namespace ConsoleVersion
@@ -17,7 +20,10 @@ namespace ConsoleVersion
             try
             {
 
-                Logic logic = new Logic();
+                //Logic logic = new Logic();
+                IKernel ninjectKernel = new StandardKernel(new SimpleConfigModule());
+
+                Logic logic = ninjectKernel.Get<Logic>();
                  
                 while (true)
                 {
