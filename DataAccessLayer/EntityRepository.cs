@@ -7,15 +7,7 @@ namespace DataAccessLayer
 {
     public class EntityRepository : IRepository<Student>
     {
-        private readonly string _connectionString;
-
-        public EntityRepository(string connectionString)
-        {
-            if (string.IsNullOrWhiteSpace(connectionString))
-                throw new ArgumentException("connectionString is null or empty", nameof(connectionString));
-
-            _connectionString = connectionString;
-        }
+        private readonly string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\t3mm1k\\projects\\AIS\\DekanatPro\\DataAccessLayer\\Database1.mdf;Integrated Security=True";
 
         public void Create(Student item)
         {

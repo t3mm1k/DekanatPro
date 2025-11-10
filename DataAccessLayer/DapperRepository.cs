@@ -13,7 +13,7 @@ namespace DataAccessLayer
 {
     public class DapperRepository : IRepository<Student>
     {
-        private readonly string _connectionString;
+        private readonly string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\t3mm1k\\projects\\AIS\\DekanatPro\\DataAccessLayer\\Database1.mdf;Integrated Security=True";
 
         public DapperRepository(string connectionString)
         {
