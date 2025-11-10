@@ -1,12 +1,13 @@
-﻿using System;
+﻿using Business_Logic;
+using DataAccessLayer; 
+using Model;
+using Ninject;
+using System;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Xml.Linq;
-using Business_Logic;
-using DataAccessLayer; 
-using Model;
 
 
 namespace WinForms_View
@@ -15,10 +16,15 @@ namespace WinForms_View
     {
         private Logic logic;
 
+
+
         public Form2()
         {
             InitializeComponent();
-            logic = new Logic();
+
+            IKernel ninjectKernel = new StandardKernel(new SimpleConfigModule());
+            logic = ninjectKernel.Get<Logic>();
+
 
             btnAdd.Click += BtnAdd_Click;
             btnDelete.Click += BtnDelete_Click;

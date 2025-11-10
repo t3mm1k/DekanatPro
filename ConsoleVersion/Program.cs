@@ -20,7 +20,6 @@ namespace ConsoleVersion
             try
             {
 
-                //Logic logic = new Logic();
                 IKernel ninjectKernel = new StandardKernel(new SimpleConfigModule());
 
                 Logic logic = ninjectKernel.Get<Logic>();
