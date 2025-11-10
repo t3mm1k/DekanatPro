@@ -1,13 +1,14 @@
 ﻿using Business_Logic;
 using System;
+using Model;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
+using Ninject;
 using DataAccessLayer;
-using Model;
 
 
 namespace ConsoleVersion
@@ -18,9 +19,12 @@ namespace ConsoleVersion
         {
             try
             {
-                // Используем новую логику с фабрикой репозиториев
-                LogicWithFactory logic = new LogicWithFactory();
 
+                //Logic logic = new Logic();
+                IKernel ninjectKernel = new StandardKernel(new SimpleConfigModule());
+
+                Logic logic = ninjectKernel.Get<Logic>();
+                 
                 while (true)
                 {
                     Console.WriteLine("\nМеню:");
@@ -31,6 +35,7 @@ namespace ConsoleVersion
                     Console.WriteLine("5. Выход");
                     Console.Write("Выберите действие: ");
                     string choice = Console.ReadLine();
+
 
                     switch (choice)
                     {
@@ -65,7 +70,7 @@ namespace ConsoleVersion
             }
         }
 
-        private static void AddStudentMenu(LogicWithFactory logic)
+        private static void AddStudentMenu(Logic logic)
         {
             Console.Write("Имя: ");
             string name = Console.ReadLine();
@@ -87,7 +92,7 @@ namespace ConsoleVersion
             }
         }
 
-        private static void DeleteStudentMenu(LogicWithFactory logic)
+        private static void DeleteStudentMenu(Logic logic)
         {
             Console.Write("Номер студенческого: ");
             string delNum = Console.ReadLine();
@@ -95,7 +100,7 @@ namespace ConsoleVersion
             Console.WriteLine("Студент удалён!");
         }
 
-        private static void ShowAllStudents(LogicWithFactory logic)
+        private static void ShowAllStudents(Logic logic)
         {
             var students = logic.GetAllStudents();
             Console.WriteLine("\nСписок студентов:");
@@ -105,7 +110,7 @@ namespace ConsoleVersion
             }
         }
 
-        private static void ShowHistogram(LogicWithFactory logic)
+        private static void ShowHistogram(Logic logic)
         {
             var histogram = logic.GetHistogram();
             if (histogram.Count == 0)
