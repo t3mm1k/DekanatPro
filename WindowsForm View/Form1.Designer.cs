@@ -36,6 +36,7 @@
             this.txtGroup = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnShowHistogram = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -106,6 +107,15 @@
             this.btnDelete.Text = "Удалить";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
+            // btnShowHistogram
+            // 
+            this.btnShowHistogram.Location = new System.Drawing.Point(242, 270);
+            this.btnShowHistogram.Name = "btnShowHistogram";
+            this.btnShowHistogram.Size = new System.Drawing.Size(127, 23);
+            this.btnShowHistogram.TabIndex = 10;
+            this.btnShowHistogram.Text = "Гистограмма";
+            this.btnShowHistogram.UseVisualStyleBackColor = true;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -120,8 +130,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1108, 319);
+            this.ClientSize = new System.Drawing.Size(1116, 665);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnShowHistogram);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtGroup);
@@ -148,6 +159,7 @@
         private System.Windows.Forms.TextBox txtGroup;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnShowHistogram;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

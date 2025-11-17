@@ -1,5 +1,4 @@
 ﻿using Business_Logic;
-using DataAccessLayer; 
 using Model;
 using Ninject;
 using System;
@@ -8,16 +7,17 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Xml.Linq;
+using WindowsForm_View;
+using Shared;
 
 
 namespace WinForms_View
 {
-    public partial class Form2 : Form
+    public partial class Form2 : Form, IView
     {
         private Logic logic;
-
-
-
+        private event Action<EventArgs> AddDataEvent;
+        private event Action<int> DeleteDataEvent;
         public Form2()
         {
             InitializeComponent();
@@ -36,32 +36,41 @@ namespace WinForms_View
         private void Form2_Load(object sender, EventArgs e)
         {
             RefreshGrid();
-            BuildChart();
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtName.Text) ||
-                string.IsNullOrWhiteSpace(txtSpeciality.Text) ||
-                string.IsNullOrWhiteSpace(txtGroup.Text))
+            AddDataEvent?.Invoke(new StudentEventArgs()
             {
-                MessageBox.Show("Заполните все поля!");
-                return;
+                Name = txtName.Text,
+                Speciality = txtSpeciality.Text,
+                Group = txtGroup.Text,
+            });
+        }
+
             }
 
-            var student = new Student(
-                txtName.Text,
-                txtSpeciality.Text,
-                txtGroup.Text
-            );
+            //if (string.IsNullOrWhiteSpace(txtName.Text) ||
+            //    string.IsNullOrWhiteSpace(txtSpeciality.Text) ||
+            //    string.IsNullOrWhiteSpace(txtGroup.Text))
+            //{
+            //    MessageBox.Show("Заполните все поля!");
+            //    return;
+            //}
 
-            logic.AddStudent(student);
+            //var student = new Student(
+            //    txtName.Text,
+            //    txtSpeciality.Text,
+            //    txtGroup.Text
+            //);
 
-            RefreshGrid();
-            BuildChart();
+            //logic.AddStudent(student);
 
-            MessageBox.Show("Студент добавлен!");
-        }
+            //RefreshGrid();
+            //BuildChart();
+
+        //    MessageBox.Show("Студент добавлен!");
+        //}
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
@@ -76,18 +85,12 @@ namespace WinForms_View
             {
                 logic.DeleteStudent(id);
                 RefreshGrid();
-                BuildChart();
                 MessageBox.Show("Студент удалён!");
             }
             else
             {
                 MessageBox.Show("Ошибка при получении ID студента!");
             }
-        }
-
-        private void BtnShowHistogram_Click(object sender, EventArgs e)
-        {
-            BuildChart();
         }
 
         private void RefreshGrid()
@@ -100,46 +103,6 @@ namespace WinForms_View
             catch (Exception ex)
             {
                 MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}");
-            }
-        }
-
-        private void BuildChart()
-        {
-            try
-            {
-                var histogram = logic.GetHistogram();
-
-                chart1.Series.Clear();
-                chart1.ChartAreas.Clear();
-                chart1.Legends.Clear();
-
-                if (histogram.Count == 0)
-                {
-                    MessageBox.Show("Нет данных для построения гистограммы.");
-                    return;
-                }
-
-                ChartArea chartArea = new ChartArea();
-                chart1.ChartAreas.Add(chartArea);
-
-                Series series = new Series
-                {
-                    Name = "Студенты",
-                    ChartType = SeriesChartType.Column,
-                    IsValueShownAsLabel = true,
-                };
-
-                foreach (var item in histogram)
-                {
-                    series.Points.AddXY(item.Key, item.Value);
-                }
-
-                chart1.Series.Add(series);
-                chart1.Invalidate();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ошибка при построении диаграммы: {ex.Message}");
             }
         }
     }
