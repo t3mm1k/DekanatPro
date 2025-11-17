@@ -28,6 +28,7 @@ namespace Model
         {
             DataChanged?.Invoke(_students);
         }
+
                 
     }
 }
