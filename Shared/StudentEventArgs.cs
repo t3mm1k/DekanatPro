@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Shared
 {
-    public class Class1
+    public class StudentEventArgs : EventArgs
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Speciality { get; set; }
+        public string Group { get; set; }   
     }
 }
