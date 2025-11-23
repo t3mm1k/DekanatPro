@@ -1,6 +1,4 @@
-﻿using Business_Logic;
-using Model;
-using Ninject;
+﻿using Ninject;
 using Shared;
 using System;
 using System.Collections.Generic;
@@ -27,10 +25,12 @@ namespace WinForms_View
         public void RedrawForm(IEnumerable<EventArgs> data)
         {
             Students_ListView.Items.Clear();
-            
+
             foreach (StudentEventArgs item in data)
             {
                 ListViewItem listViewItem = new ListViewItem(item.Name);
+
+                listViewItem.SubItems.Add(item.Id);
                 listViewItem.SubItems.Add(item.Speciality);
                 listViewItem.SubItems.Add(item.Group);
 
@@ -40,7 +40,8 @@ namespace WinForms_View
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             if (txtName.Text == String.Empty || txtId.Text == String.Empty || txtSpeciality.Text == String.Empty || txtGroup.Text == String.Empty) {
-                MessageBox.Show("Не все поля заполнены.") }
+                MessageBox.Show("Не все поля заполнены.");
+            }
             else 
             {
                 AddDataEvent?.Invoke(new StudentEventArgs()

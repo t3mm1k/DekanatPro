@@ -96,18 +96,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BusinessLogic\Business Logic.csproj">
-      <Project>{b84897ba-75f8-49dd-9954-2af949ad4ccb}</Project>
-      <Name>Business Logic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
-      <Project>{d77dcc9b-e539-4f75-904c-57a397ceb362}</Project>
-      <Name>DataAccessLayer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Model\Model.csproj">
-      <Project>{b6392a2f-bc54-4f6a-bece-0c4da45cd5f6}</Project>
-      <Name>Model</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Shared\Shared.csproj">
       <Project>{714eed36-114a-416d-9592-10f4f5cc90bd}</Project>
       <Name>Shared</Name>
