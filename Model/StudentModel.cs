@@ -7,28 +7,28 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    internal class StudentModel
+    public class StudentModel : IModel<Student> 
     {
         private List<Student> _students = new List<Student>();
 
-        private event Action<IEnumerable<Student>> DataChanged;
-
+        public event Action<IEnumerable<Student>> DataChanged;
 
         public void Delete(int id)
         {
-            _students = _students.Where(student =>  student.Id != id).ToList();
+            _students.RemoveAt(id);
+            //_students = _students.Where(student => student.Id != id).ToList();
+            InvokeDataChanged();
         }
 
         public void Insert(Student student)
         {
             _students.Add(student); 
+            InvokeDataChanged();
         }
 
         private void InvokeDataChanged()
         {
-            DataChanged?.Invoke(_students);
+            DataChanged?.Invoke(new List<Student>(_students));
         }
-
-                
     }
 }

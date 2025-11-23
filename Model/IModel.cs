@@ -12,5 +12,4 @@ namespace Model
         void Delete(int id);
         void Insert(T item);
     }
-
 }
