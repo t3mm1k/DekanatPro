@@ -10,6 +10,8 @@ namespace WindowsForm_View
     {
         event Action<EventArgs> AddDataEvent;
         event Action<int> DeleteDataEvent;
+
+        void RedrawForm(IEnumerable<EventArgs> data);
     }
 
 }
