@@ -1,14 +1,15 @@
 ﻿using Business_Logic;
 using Model;
 using Ninject;
+using Shared;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Xml.Linq;
 using WindowsForm_View;
-using Shared;
 
 
 namespace WinForms_View
@@ -23,11 +24,11 @@ namespace WinForms_View
         public event Action<EventArgs> AddDataEvent;
         public event Action<int> DeleteDataEvent;
 
-        public void RedrawForm(IEquatable<EventArgs> data)
+        public void RedrawForm(IEnumerable<EventArgs> data)
         {
             Students_ListView.Items.Clear();
             
-            foreach(StudentEventArgs item in data)
+            foreach (StudentEventArgs item in data)
             {
                 ListViewItem listViewItem = new ListViewItem(item.Name);
                 listViewItem.SubItems.Add(item.Speciality);
@@ -38,56 +39,31 @@ namespace WinForms_View
         }
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            AddDataEvent?.Invoke(new StudentEventArgs()
+            if (txtName.Text == String.Empty || txtId.Text == String.Empty || txtSpeciality.Text == String.Empty || txtGroup.Text == String.Empty) {
+                MessageBox.Show("Не все поля заполнены.") }
+            else 
             {
-                Id = 
-                Name = txtName.Text,
-                Speciality = txtSpeciality.Text,
-                Group = txtGroup.Text,
-            });
+                AddDataEvent?.Invoke(new StudentEventArgs()
+                {
+                    Id = txtId.Text,
+                    Name = txtName.Text,
+                    Speciality = txtSpeciality.Text,
+                    Group = txtGroup.Text
+                }); 
+                txtId.Text = String.Empty;
+                txtSpeciality.Text = String.Empty;
+                txtName.Text = String.Empty;
+                txtGroup.Text = String.Empty;
+            }
         }
         private void BtnDelete_Click(object sender, EventArgs e)
         {
+            if (Students_ListView.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Студент не выбран.");
+            }
+            else 
             DeleteDataEvent?.Invoke(Students_ListView.SelectedIndices[0]);
         }
-
-        // }
-        //if (string.IsNullOrWhiteSpace(txtName.Text) ||
-        //    string.IsNullOrWhiteSpace(txtSpeciality.Text) ||
-        //    string.IsNullOrWhiteSpace(txtGroup.Text))
-        //{
-        //    MessageBox.Show("Заполните все поля!");
-        //    return;
-        //}
-
-        //var student = new Student(
-        //    txtName.Text,
-        //    txtSpeciality.Text,
-        //    txtGroup.Text
-        //);
-
-        //logic.AddStudent(student);
-
-        //RefreshGrid();
-        //BuildChart();
-
-        //    MessageBox.Show("Студент добавлен!");
-        //}
-
-
-
-        private void RefreshGrid()
-        {
-            try
-            {
-                DataTable sheet = logic.GetSheet();
-                dataGridView1.DataSource = sheet;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}");
-            }
-        }
-
     }
 }
