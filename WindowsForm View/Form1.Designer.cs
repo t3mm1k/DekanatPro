@@ -39,6 +39,10 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.txtId = new System.Windows.Forms.TextBox();
             this.Students_ListView = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lblName
@@ -106,6 +110,7 @@
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "Добавить";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // btnDelete
             // 
@@ -115,6 +120,7 @@
             this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Удалить";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // txtId
             // 
@@ -125,12 +131,39 @@
             // 
             // Students_ListView
             // 
+            this.Students_ListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.Students_ListView.GridLines = true;
             this.Students_ListView.HideSelection = false;
-            this.Students_ListView.Location = new System.Drawing.Point(419, 56);
+            this.Students_ListView.Location = new System.Drawing.Point(387, 50);
             this.Students_ListView.Name = "Students_ListView";
-            this.Students_ListView.Size = new System.Drawing.Size(629, 264);
+            this.Students_ListView.Size = new System.Drawing.Size(650, 270);
             this.Students_ListView.TabIndex = 14;
             this.Students_ListView.UseCompatibleStateImageBehavior = false;
+            this.Students_ListView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "имя";
+            this.columnHeader1.Width = 120;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "специальность";
+            this.columnHeader2.Width = 120;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "группа";
+            this.columnHeader3.Width = 120;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "номер студ.";
+            this.columnHeader4.Width = 120;
             // 
             // Form2
             // 
@@ -168,6 +201,10 @@
         private System.Windows.Forms.Label lblGroup;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.ListView Students_ListView;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }
 

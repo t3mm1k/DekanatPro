@@ -30,9 +30,9 @@ namespace WinForms_View
             {
                 ListViewItem listViewItem = new ListViewItem(item.Name);
 
-                listViewItem.SubItems.Add(item.Id);
                 listViewItem.SubItems.Add(item.Speciality);
                 listViewItem.SubItems.Add(item.Group);
+                listViewItem.SubItems.Add(item.Id);
 
                 Students_ListView.Items.Add(listViewItem);
             }
