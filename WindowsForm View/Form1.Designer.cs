@@ -38,7 +38,8 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.Students_ListView = new System.Windows.Forms.ListView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblName
@@ -106,6 +107,7 @@
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "Добавить";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // btnDelete
             // 
@@ -115,6 +117,7 @@
             this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Удалить";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // txtId
             // 
@@ -123,21 +126,21 @@
             this.txtId.Size = new System.Drawing.Size(100, 22);
             this.txtId.TabIndex = 13;
             // 
-            // Students_ListView
+            // dataGridView1
             // 
-            this.Students_ListView.HideSelection = false;
-            this.Students_ListView.Location = new System.Drawing.Point(419, 56);
-            this.Students_ListView.Name = "Students_ListView";
-            this.Students_ListView.Size = new System.Drawing.Size(629, 264);
-            this.Students_ListView.TabIndex = 14;
-            this.Students_ListView.UseCompatibleStateImageBehavior = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(427, 58);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(548, 291);
+            this.dataGridView1.TabIndex = 14;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1116, 665);
-            this.Controls.Add(this.Students_ListView);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblGroup);
             this.Controls.Add(this.btnDelete);
@@ -150,6 +153,7 @@
             this.Controls.Add(this.lblName);
             this.Name = "Form2";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,7 +171,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label lblGroup;
         private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.ListView Students_ListView;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

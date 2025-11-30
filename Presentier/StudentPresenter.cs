@@ -44,6 +44,7 @@ namespace Presentier
 
         private void OnAddData(EventArgs args)
         {
+            Console.WriteLine('3');
             StudentEventArgs sArgs = args as StudentEventArgs;
             Student student = new Student();
             student.Id = sArgs.Id;

@@ -50,7 +50,9 @@ namespace WinForms_View
                     Name = txtName.Text,
                     Speciality = txtSpeciality.Text,
                     Group = txtGroup.Text
-                }); 
+                });
+
+                Console.WriteLine("123");
                 txtId.Text = String.Empty;
                 txtSpeciality.Text = String.Empty;
                 txtName.Text = String.Empty;
@@ -59,12 +61,7 @@ namespace WinForms_View
         }
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            if (Students_ListView.SelectedItems.Count == 0)
-            {
-                MessageBox.Show("Студент не выбран.");
-            }
-            else 
-            DeleteDataEvent?.Invoke(Students_ListView.SelectedIndices[0]);
+
         }
     }
 }
