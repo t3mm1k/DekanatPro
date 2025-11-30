@@ -28,6 +28,9 @@ namespace Model
 
         private void InvokeDataChanged()
         {
+
+
+
             DataChanged?.Invoke(new List<Student>(_students));
         }
     }

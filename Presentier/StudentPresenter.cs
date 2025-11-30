@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Model;
 using Shared;
 using WindowsForm_View;
 
@@ -17,7 +16,7 @@ namespace Presentier
 
         public StudentPresenter(IView view,  IModel<Student> model)
         {
-            this.model = model;
+            //this.model = model;
             this.view = view;
 
             model.DataChanged += OnModelDataChanged;
@@ -46,7 +45,7 @@ namespace Presentier
         {
             Console.WriteLine('3');
             StudentEventArgs sArgs = args as StudentEventArgs;
-            Student student = new Student();
+            //Student student = new Student();
             student.Id = sArgs.Id;
             student.Name = sArgs.Name;
             student.Speciality = sArgs.Speciality;
