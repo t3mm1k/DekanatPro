@@ -28,28 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lblName = new System.Windows.Forms.Label();
             this.lblSpeciality = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
             this.lblGroup = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtSpeciality = new System.Windows.Forms.TextBox();
             this.txtGroup = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnShowHistogram = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.Students_ListView = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(43, 35);
+            this.lblName.Location = new System.Drawing.Point(46, 56);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(33, 16);
             this.lblName.TabIndex = 0;
@@ -58,116 +57,132 @@
             // lblSpeciality
             // 
             this.lblSpeciality.AutoSize = true;
-            this.lblSpeciality.Location = new System.Drawing.Point(46, 93);
+            this.lblSpeciality.Location = new System.Drawing.Point(46, 109);
             this.lblSpeciality.Name = "lblSpeciality";
             this.lblSpeciality.Size = new System.Drawing.Size(108, 16);
             this.lblSpeciality.TabIndex = 1;
             this.lblSpeciality.Text = "Специальность";
             // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(46, 211);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(151, 16);
+            this.lblId.TabIndex = 2;
+            this.lblId.Text = "Номер студенческого";
+            // 
             // lblGroup
             // 
             this.lblGroup.AutoSize = true;
-            this.lblGroup.Location = new System.Drawing.Point(49, 146);
+            this.lblGroup.Location = new System.Drawing.Point(46, 157);
             this.lblGroup.Name = "lblGroup";
             this.lblGroup.Size = new System.Drawing.Size(54, 16);
-            this.lblGroup.TabIndex = 2;
+            this.lblGroup.TabIndex = 12;
             this.lblGroup.Text = "Группа";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(196, 28);
+            this.txtName.Location = new System.Drawing.Point(226, 50);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 22);
             this.txtName.TabIndex = 4;
             // 
             // txtSpeciality
             // 
-            this.txtSpeciality.Location = new System.Drawing.Point(208, 86);
+            this.txtSpeciality.Location = new System.Drawing.Point(226, 106);
             this.txtSpeciality.Name = "txtSpeciality";
             this.txtSpeciality.Size = new System.Drawing.Size(100, 22);
             this.txtSpeciality.TabIndex = 5;
             // 
             // txtGroup
             // 
-            this.txtGroup.Location = new System.Drawing.Point(217, 139);
+            this.txtGroup.Location = new System.Drawing.Point(226, 154);
             this.txtGroup.Name = "txtGroup";
             this.txtGroup.Size = new System.Drawing.Size(100, 22);
             this.txtGroup.TabIndex = 6;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(34, 270);
+            this.btnAdd.Location = new System.Drawing.Point(49, 277);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.Size = new System.Drawing.Size(118, 43);
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "Добавить";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(133, 270);
+            this.btnDelete.Location = new System.Drawing.Point(209, 277);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.Size = new System.Drawing.Size(117, 43);
             this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Удалить";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
-            // btnShowHistogram
+            // txtId
             // 
-            this.btnShowHistogram.Location = new System.Drawing.Point(242, 270);
-            this.btnShowHistogram.Name = "btnShowHistogram";
-            this.btnShowHistogram.Size = new System.Drawing.Size(127, 23);
-            this.btnShowHistogram.TabIndex = 10;
-            this.btnShowHistogram.Text = "Гистограмма";
-            this.btnShowHistogram.UseVisualStyleBackColor = true;
+            this.txtId.Location = new System.Drawing.Point(226, 211);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 22);
+            this.txtId.TabIndex = 13;
             // 
-            // dataGridView1
+            // Students_ListView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(398, 11);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(706, 298);
-            this.dataGridView1.TabIndex = 11;
+            this.Students_ListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.Students_ListView.GridLines = true;
+            this.Students_ListView.HideSelection = false;
+            this.Students_ListView.Location = new System.Drawing.Point(387, 50);
+            this.Students_ListView.Name = "Students_ListView";
+            this.Students_ListView.Size = new System.Drawing.Size(650, 270);
+            this.Students_ListView.TabIndex = 14;
+            this.Students_ListView.UseCompatibleStateImageBehavior = false;
+            this.Students_ListView.View = System.Windows.Forms.View.Details;
             // 
-            // chart1
+            // columnHeader1
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart1.Legends.Add(legend5);
-            this.chart1.Location = new System.Drawing.Point(34, 328);
-            this.chart1.Name = "chart1";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chart1.Series.Add(series5);
-            this.chart1.Size = new System.Drawing.Size(1077, 300);
-            this.chart1.TabIndex = 12;
-            this.chart1.Text = "chart1";
+            this.columnHeader1.Text = "имя";
+            this.columnHeader1.Width = 120;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "специальность";
+            this.columnHeader2.Width = 120;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "группа";
+            this.columnHeader3.Width = 120;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "номер студ.";
+            this.columnHeader4.Width = 120;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1116, 665);
-            this.Controls.Add(this.chart1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnShowHistogram);
+            this.Controls.Add(this.Students_ListView);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.lblGroup);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtGroup);
             this.Controls.Add(this.txtSpeciality);
             this.Controls.Add(this.txtName);
-            this.Controls.Add(this.lblGroup);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.lblSpeciality);
             this.Controls.Add(this.lblName);
             this.Name = "Form2";
             this.Text = "Form1";
-            //this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,15 +192,19 @@
 
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblSpeciality;
-        private System.Windows.Forms.Label lblGroup;
+        private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtSpeciality;
         private System.Windows.Forms.TextBox txtGroup;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnShowHistogram;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Label lblGroup;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.ListView Students_ListView;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }
 
