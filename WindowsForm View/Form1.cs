@@ -1,146 +1,70 @@
-﻿using Business_Logic;
-using DataAccessLayer; 
-using Model;
-using Ninject;
+﻿using Ninject;
+using Shared;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Xml.Linq;
+using WindowsForm_View;
 
 
 namespace WinForms_View
 {
-    public partial class Form2 : Form
+    public partial class Form2 : Form, IView
     {
-        private Logic logic;
-
-
-
         public Form2()
         {
             InitializeComponent();
-
-            IKernel ninjectKernel = new StandardKernel(new SimpleConfigModule());
-            logic = ninjectKernel.Get<Logic>();
-
-
-            btnAdd.Click += BtnAdd_Click;
-            btnDelete.Click += BtnDelete_Click;
-            btnShowHistogram.Click += BtnShowHistogram_Click;
-
-            this.Load += Form2_Load;
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        public event Action<EventArgs> AddDataEvent;
+        public event Action<int> DeleteDataEvent;
+
+        public void RedrawForm(IEnumerable<EventArgs> data)
         {
-            RefreshGrid();
-            BuildChart();
-        }
+            Students_ListView.Items.Clear();
 
+            foreach (StudentEventArgs item in data)
+            {
+                ListViewItem listViewItem = new ListViewItem(item.Name);
+
+                listViewItem.SubItems.Add(item.Speciality);
+                listViewItem.SubItems.Add(item.Group);
+                listViewItem.SubItems.Add(item.Id);
+
+                Students_ListView.Items.Add(listViewItem);
+            }
+        }
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtName.Text) ||
-                string.IsNullOrWhiteSpace(txtSpeciality.Text) ||
-                string.IsNullOrWhiteSpace(txtGroup.Text))
-            {
-                MessageBox.Show("Заполните все поля!");
-                return;
+            if (txtName.Text == String.Empty || txtId.Text == String.Empty || txtSpeciality.Text == String.Empty || txtGroup.Text == String.Empty) {
+                MessageBox.Show("Не все поля заполнены.");
             }
-
-            var student = new Student(
-                txtName.Text,
-                txtSpeciality.Text,
-                txtGroup.Text
-            );
-
-            logic.AddStudent(student);
-
-            RefreshGrid();
-            BuildChart();
-
-            MessageBox.Show("Студент добавлен!");
+            else 
+            {
+                AddDataEvent?.Invoke(new StudentEventArgs()
+                {
+                    Id = txtId.Text,
+                    Name = txtName.Text,
+                    Speciality = txtSpeciality.Text,
+                    Group = txtGroup.Text
+                }); 
+                txtId.Text = String.Empty;
+                txtSpeciality.Text = String.Empty;
+                txtName.Text = String.Empty;
+                txtGroup.Text = String.Empty;
+            }
         }
-
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 0)
+            if (Students_ListView.SelectedItems.Count == 0)
             {
-                MessageBox.Show("Выберите студента для удаления!");
-                return;
+                MessageBox.Show("Студент не выбран.");
             }
-
-            var selectedRow = dataGridView1.SelectedRows[0];
-            if (selectedRow.Cells["Id"].Value != null && int.TryParse(selectedRow.Cells["Id"].Value.ToString(), out int id))
-            {
-                logic.DeleteStudent(id);
-                RefreshGrid();
-                BuildChart();
-                MessageBox.Show("Студент удалён!");
-            }
-            else
-            {
-                MessageBox.Show("Ошибка при получении ID студента!");
-            }
-        }
-
-        private void BtnShowHistogram_Click(object sender, EventArgs e)
-        {
-            BuildChart();
-        }
-
-        private void RefreshGrid()
-        {
-            try
-            {
-                DataTable sheet = logic.GetSheet();
-                dataGridView1.DataSource = sheet;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}");
-            }
-        }
-
-        private void BuildChart()
-        {
-            try
-            {
-                var histogram = logic.GetHistogram();
-
-                chart1.Series.Clear();
-                chart1.ChartAreas.Clear();
-                chart1.Legends.Clear();
-
-                if (histogram.Count == 0)
-                {
-                    MessageBox.Show("Нет данных для построения гистограммы.");
-                    return;
-                }
-
-                ChartArea chartArea = new ChartArea();
-                chart1.ChartAreas.Add(chartArea);
-
-                Series series = new Series
-                {
-                    Name = "Студенты",
-                    ChartType = SeriesChartType.Column,
-                    IsValueShownAsLabel = true,
-                };
-
-                foreach (var item in histogram)
-                {
-                    series.Points.AddXY(item.Key, item.Value);
-                }
-
-                chart1.Series.Add(series);
-                chart1.Invalidate();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ошибка при построении диаграммы: {ex.Message}");
-            }
+            else 
+            DeleteDataEvent?.Invoke(Students_ListView.SelectedIndices[0]);
         }
     }
 }
