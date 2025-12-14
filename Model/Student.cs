@@ -53,6 +53,16 @@ namespace Model
         }
         private string _speciality;
 
+        public Student()
+        { }
+
+        public Student(string name, string group, string spec)
+        {
+            this.Speciality = spec;
+            this.Name = name;
+            this.Group = group;
+        }
+
         private void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

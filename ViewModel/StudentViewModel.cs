@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using Model;
-using System.Linq;
+using System.Linq;  
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,6 +21,8 @@ namespace ViewModel
         {
             Students = new ObservableCollection<Student>();
             CurrentStudent = new Student();
+
+            Students.Add(new Student("1", "1", "1"));
 
             AddStudentCommand = new RelayCommand(AddStudent);
             RemoveStudentCommand = new RelayCommand(RemoveStudent);
