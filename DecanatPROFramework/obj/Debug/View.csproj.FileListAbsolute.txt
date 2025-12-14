@@ -1,0 +1,15 @@
+T:\decninja\DekanatPro\DecanatPROFramework\bin\Debug\DecanatPROFramework.exe.config
+T:\decninja\DekanatPro\DecanatPROFramework\bin\Debug\DecanatPROFramework.exe
+T:\decninja\DekanatPro\DecanatPROFramework\bin\Debug\DecanatPROFramework.pdb
+T:\decninja\DekanatPro\DecanatPROFramework\obj\Debug\View.csproj.AssemblyReference.cache
+T:\decninja\DekanatPro\DecanatPROFramework\obj\Debug\MainWindow.g.cs
+T:\decninja\DekanatPro\DecanatPROFramework\obj\Debug\App.g.cs
+T:\decninja\DekanatPro\DecanatPROFramework\obj\Debug\DecanatPROFramework_MarkupCompile.cache
+T:\decninja\DekanatPro\DecanatPROFramework\obj\Debug\DecanatPROFramework_MarkupCompile.lref
+T:\decninja\DekanatPro\DecanatPROFramework\obj\Debug\MainWindow.baml
+T:\decninja\DekanatPro\DecanatPROFramework\obj\Debug\DecanatPROFramework.g.resources
+T:\decninja\DekanatPro\DecanatPROFramework\obj\Debug\DecanatPROFramework.Properties.Resources.resources
+T:\decninja\DekanatPro\DecanatPROFramework\obj\Debug\View.csproj.GenerateResource.cache
+T:\decninja\DekanatPro\DecanatPROFramework\obj\Debug\View.csproj.CoreCompileInputs.cache
+T:\decninja\DekanatPro\DecanatPROFramework\obj\Debug\DecanatPROFramework.exe
+T:\decninja\DekanatPro\DecanatPROFramework\obj\Debug\DecanatPROFramework.pdb
