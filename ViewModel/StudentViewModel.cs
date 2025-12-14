@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using Model;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,12 +19,24 @@ namespace ViewModel
 
         public StudentViewModel()
         {
+            Students = new ObservableCollection<Student>();
+            CurrentStudent = new Student();
 
+            AddStudentCommand = new RelayCommand(AddStudent);
+            RemoveStudentCommand = new RelayCommand(RemoveStudent);
         }
 
         public Student CurrentStudent
         {
-
+            get
+            {
+                return _student;
+            }
+            set
+            {
+                _student = value;
+                OnPropertyChanged(nameof(CurrentStudent));
+            }
         }
         public Student _student { get; set; }
 
