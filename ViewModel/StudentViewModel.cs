@@ -22,7 +22,8 @@ namespace ViewModel
             Students = new ObservableCollection<Student>();
             CurrentStudent = new Student();
 
-            Students.Add(new Student("1", "1", "1"));
+            Students.Add(new Student("Подкур Артём", "КИ24-21Б", "ПИ"));
+            Students.Add(new Student("Трачук Дмитрий", "КИ24-21Б", "ПИ"));
 
             AddStudentCommand = new RelayCommand(AddStudent);
             RemoveStudentCommand = new RelayCommand(RemoveStudent);

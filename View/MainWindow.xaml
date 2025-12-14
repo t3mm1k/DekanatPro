@@ -1,29 +1,63 @@
 ﻿<Window x:Class="DecanatPROFramework.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DecanatPROFramework"
-        mc:Ignorable="d"
-        Title="DecanatPRO" Height="450" Width="800">
-    <Grid>
-        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="117,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtGroup" HorizontalAlignment="Left" Margin="117,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtSpeciality" HorizontalAlignment="Left" Margin="117,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnAdd" Content="Добавить" HorizontalAlignment="Left" Margin="10,189,0,0" VerticalAlignment="Top" Width="84"/>
-        <Button x:Name="btnDelete" Content="Удалить" HorizontalAlignment="Left" Margin="135,189,0,0" VerticalAlignment="Top" Width="84"/>
-        <Label x:Name="lblName" Content="Имя" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Width="55"/>
-        <Label x:Name="lblGroup" Content="Группа" HorizontalAlignment="Left" Margin="13,75,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblSpeciality" Content="Специальность" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top"/>
-        <ListView ItemsSource="{Binding Students}" SelectedItem="{Binding CurrentStudent}" Margin="282,19,118,145">
+        Title="DecanatPRO"
+        Height="450"
+        Width="800">
+
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+
+            <Label Content="Имя"/>
+            <TextBox Text="{Binding CurrentStudent.Name,
+                                    UpdateSourceTrigger=PropertyChanged}"/>
+
+            <Label Content="Группа" Margin="0,10,0,0"/>
+            <TextBox Text="{Binding CurrentStudent.Group,
+                                    UpdateSourceTrigger=PropertyChanged}"/>
+
+            <Label Content="Специальность" Margin="0,10,0,0"/>
+            <TextBox Text="{Binding CurrentStudent.Speciality,
+                                    UpdateSourceTrigger=PropertyChanged}"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <Button Content="Добавить"
+                        Width="100"
+                        Margin="0,0,10,0"
+                        Command="{Binding AddStudentCommand}"/>
+
+                <Button Content="Удалить"
+                        Width="100"
+                        Command="{Binding RemoveStudentCommand}"/>
+            </StackPanel>
+
+        </StackPanel>
+
+        <ListView Grid.Column="1"
+                  Margin="10,0,0,0"
+                  ItemsSource="{Binding Students}"
+                  SelectedItem="{Binding CurrentStudent, Mode=TwoWay}">
+
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Имя"/>
-                    <GridViewColumn Header="Группа"/>
-                    <GridViewColumn Header="Специальность"/>
+                    <GridViewColumn Header="Имя"
+                                    DisplayMemberBinding="{Binding Name}"
+                                    Width="150"/>
+
+                    <GridViewColumn Header="Группа"
+                                    DisplayMemberBinding="{Binding Group}"
+                                    Width="100"/>
+
+                    <GridViewColumn Header="Специальность"
+                                    DisplayMemberBinding="{Binding Speciality}"
+                                    Width="150"/>
                 </GridView>
             </ListView.View>
         </ListView>
-
     </Grid>
 </Window>
