@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="DecanatPROFramework/View.csproj" Id="e0ce9011-c765-41ad-b39b-77b3a849cee4" />
+  <Project Path="View/View.csproj" Id="e0ce9011-c765-41ad-b39b-77b3a849cee4" />
   <Project Path="Model/Model.csproj" Id="67c4aed0-5553-4f12-b2c7-73db04ccf50b" />
   <Project Path="ViewModel/ViewModel.csproj" Id="66bedba8-cd0f-4cd9-9b83-07cdf146164d" />
 </Solution>
