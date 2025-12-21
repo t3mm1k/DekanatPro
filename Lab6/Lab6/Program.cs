@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 
 namespace Lab6
 {
@@ -104,12 +103,11 @@ namespace Lab6
 
         public virtual string GetInfo()
         {
-            var culture = new CultureInfo("ru-RU");
             return string.Join(Environment.NewLine,
                 FullName,
-                "Базовая зарплата:" + BaseSalary.ToString("0", culture),
+                "Базовая зарплата:" + BaseSalary,
                 "Для перечисления зарплаты используется сервис " + SalaryTransferStrategy.ServiceName,
-                "Зарплата после удержания комиссии сервиса: " + SalaryAfterCommission.ToString("0", culture),
+                "Зарплата после удержания комиссии сервиса: " + SalaryAfterCommission,
                 "Должность: " + PositionTitle);
         }
     }
