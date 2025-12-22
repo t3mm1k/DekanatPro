@@ -14,7 +14,6 @@ namespace Lab6
             Employee ivanova = new EngineerEmployee("Иванова Томара Евгеньевна", 60000m, sberbank);
             Employee sidorov = new ScientistEmployee("Сидоров Леонид Аркадьевич", 50000m, gazprombank);
 
-            // Декоратор: добавляем доп. характеристику уже созданному сотруднику.
             sidorov = new DegreeDecorator(
                 sidorov,
                 "Бесполезные исследования, требующие инвестиций правительства",
@@ -25,7 +24,6 @@ namespace Lab6
 
             PrintEmployees(employees);
 
-            // Показ изменения: добавили сертификат и сменили стратегию перечисления.
             Console.WriteLine(sidorov.FullName + ": добавлен сертификат о владении английским языком");
             sidorov = new EnglishCertificateDecorator(sidorov, "Экзамен по английскому", 2007);
 
@@ -49,8 +47,6 @@ namespace Lab6
             }
         }
     }
-
-    // ====== Strategy ======
     internal interface ISalaryTransferStrategy
     {
         string ServiceName { get; }
@@ -80,7 +76,6 @@ namespace Lab6
         }
     }
 
-    // ====== Core Employee + positions (inheritance) ======
     internal abstract class Employee
     {
         protected Employee(string fullName, decimal baseSalary, ISalaryTransferStrategy salaryTransferStrategy)
@@ -136,7 +131,6 @@ namespace Lab6
         public override string PositionTitle { get { return "Научный сотрудник"; } }
     }
 
-    // ====== Decorator ======
     internal abstract class EmployeeDecorator : Employee
     {
         protected readonly Employee Inner;
